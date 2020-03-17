@@ -34,7 +34,6 @@ initialize方法只会在类第一次接收到消息时初始化。
 1、调用方式：load是根据函数地址直接调用，initialize是通过objc_msgSend调用；调用时刻：load是Runtime加载类、分类的时候调用（只会调用1次），initialize是类第一次接收到消息时调用，每一个类只会initialize一次（父类的initialize方法可能被调用多次）；
 2、load先按照编译顺序调用类的load，调用子类的load之前会调用父类的load，然后再按照编译顺序调用分类的load；initialize在类第一次接收到消息时通过objc_msgSend调用，先调用父类的initialize再调用子类的initialize，若分类实现了initialize就覆盖类原来的initialize调用，若子类没有实现initialize，会调用父类的initialize。
 3、load先调用父类的load再调用子类的load；initialize先调用父类的initialize再调用子类的initialize。
-    
 
 
 问：Category能否添加成员变量？如果可以如何给Category添加成员变量？
