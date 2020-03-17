@@ -16,6 +16,8 @@
 #import "XZQPerson_Category+Test.h"
 #import "XZQPerson_Category+Eat.h"
 
+#import "XZQStudent_Category.h"
+
 @interface Student : NSObject
 {
     @public
@@ -80,6 +82,11 @@
     [person run];
     [person test];
     [person eat];
+
+    [self printMethodNamesOfClass:object_getClass([XZQPerson_Category class])];
+    
+    // 子类会先调用父类的initialize
+    [XZQStudent_Category alloc];
 }
 
 - (void)kvc {

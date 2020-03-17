@@ -15,6 +15,14 @@
 
 @implementation XZQPerson_Category
 
++ (void)initialize {
+    NSLog(@"XZQPerson_Category +initialize");
+}
+
++ (void)load {
+    NSLog(@"XZQPerson_Category +load");
+}
+
 - (void)run {
     NSLog(@"run");
 }

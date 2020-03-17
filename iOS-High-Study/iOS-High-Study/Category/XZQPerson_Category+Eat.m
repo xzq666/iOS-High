@@ -10,6 +10,14 @@
 
 @implementation XZQPerson_Category (Eat)
 
++ (void)initialize {
+    NSLog(@"XZQPerson_Category Eat +initialize");
+}
+
++ (void)load {
+    NSLog(@"XZQPerson_Category Eat +load");
+}
+
 - (void)run {
     NSLog(@"run-eat");
 }

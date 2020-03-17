@@ -19,6 +19,10 @@
 		F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8AD241F221A006284AF /* XZQPerson_Category.m */; };
 		F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8B0241F2249006284AF /* XZQPerson_Category+Test.m */; };
 		F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8B3241F2578006284AF /* XZQPerson_Category+Eat.m */; };
+		F0DE558624206058007BF97D /* XZQStudent_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558524206058007BF97D /* XZQStudent_Category.m */; };
+		F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558824206072007BF97D /* XZQStudent_Category+Test1.m */; };
+		F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558B2420607A007BF97D /* XZQStudent_Category+Test2.m */; };
+		F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,14 @@
 		F0D5B8B0241F2249006284AF /* XZQPerson_Category+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XZQPerson_Category+Test.m"; sourceTree = "<group>"; };
 		F0D5B8B2241F2578006284AF /* XZQPerson_Category+Eat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XZQPerson_Category+Eat.h"; sourceTree = "<group>"; };
 		F0D5B8B3241F2578006284AF /* XZQPerson_Category+Eat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XZQPerson_Category+Eat.m"; sourceTree = "<group>"; };
+		F0DE558424206058007BF97D /* XZQStudent_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQStudent_Category.h; sourceTree = "<group>"; };
+		F0DE558524206058007BF97D /* XZQStudent_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQStudent_Category.m; sourceTree = "<group>"; };
+		F0DE558724206072007BF97D /* XZQStudent_Category+Test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XZQStudent_Category+Test1.h"; sourceTree = "<group>"; };
+		F0DE558824206072007BF97D /* XZQStudent_Category+Test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XZQStudent_Category+Test1.m"; sourceTree = "<group>"; };
+		F0DE558A2420607A007BF97D /* XZQStudent_Category+Test2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XZQStudent_Category+Test2.h"; sourceTree = "<group>"; };
+		F0DE558B2420607A007BF97D /* XZQStudent_Category+Test2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XZQStudent_Category+Test2.m"; sourceTree = "<group>"; };
+		F0DE558D24207BC0007BF97D /* XZQTeacher_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Category.h; sourceTree = "<group>"; };
+		F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Category.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,14 @@
 				F0D5B8B0241F2249006284AF /* XZQPerson_Category+Test.m */,
 				F0D5B8B2241F2578006284AF /* XZQPerson_Category+Eat.h */,
 				F0D5B8B3241F2578006284AF /* XZQPerson_Category+Eat.m */,
+				F0DE558424206058007BF97D /* XZQStudent_Category.h */,
+				F0DE558524206058007BF97D /* XZQStudent_Category.m */,
+				F0DE558724206072007BF97D /* XZQStudent_Category+Test1.h */,
+				F0DE558824206072007BF97D /* XZQStudent_Category+Test1.m */,
+				F0DE558A2420607A007BF97D /* XZQStudent_Category+Test2.h */,
+				F0DE558B2420607A007BF97D /* XZQStudent_Category+Test2.m */,
+				F0DE558D24207BC0007BF97D /* XZQTeacher_Category.h */,
+				F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -215,14 +235,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
+				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
 				F03DD0182410FE470097D400 /* ViewController.m in Sources */,
+				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
+				F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */,
 				F03DD0122410FE470097D400 /* AppDelegate.m in Sources */,
+				F0DE558624206058007BF97D /* XZQStudent_Category.m in Sources */,
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
-				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,14 @@
 
 @implementation XZQPerson_Category (Test)
 
++ (void)initialize {
+    NSLog(@"XZQPerson_Category Test +initialize");
+}
+
++ (void)load {
+    NSLog(@"XZQPerson_Category Test +load");
+}
+
 - (void)run {
     NSLog(@"run-test");
 }
