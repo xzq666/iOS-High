@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XZQPerson_Category : NSObject
 
+@property(nonatomic,assign) int height;
+
 - (void)run;
 
 @end

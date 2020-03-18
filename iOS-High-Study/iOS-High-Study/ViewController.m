@@ -87,6 +87,13 @@
     
     // 子类会先调用父类的initialize
     [XZQStudent_Category alloc];
+    
+    NSLog(@"-------------");
+    
+    person.weight = 20;
+    XZQPerson_Category *person2 = [[XZQPerson_Category alloc] init];
+    person2.weight = 30;
+    NSLog(@"-->%d, %d", person.weight, person2.weight);
 }
 
 - (void)kvc {

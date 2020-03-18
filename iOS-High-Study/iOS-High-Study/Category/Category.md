@@ -36,5 +36,17 @@ initialize方法只会在类第一次接收到消息时初始化。
 3、load先调用父类的load再调用子类的load；initialize先调用父类的initialize再调用子类的initialize。
 
 
+### 关联对象
+默认情况下，因为分类底层结构的限制，不能添加成员变量到分类中，但可以通过关联对象间接实现。
+
+关联对象提供了以下API：
+1、添加关联对象：void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)
+2、获得关联对象：id objc_getAsoociatedObject(id object, const void *key)
+3、移除所有的关联对象：void objc_removeAssociatedObjects(id object)
+
+关联对象并不是存储在被关联对象本身内存中，而是存储在全局统一的一个AssociationsManager中。
+设置关联对象为nil，相当于移除关联对象。（objc_setAssociatedObject(self, XZQWeightKey, nil, OBJC_ASSOCIATION_ASSIGN);会将height关联移除）
+
+
 问：Category能否添加成员变量？如果可以如何给Category添加成员变量？
-答：
+答：不能直接给Category添加成员变量，但是可以通过关联对象间接实现分类有成员变量的效果。

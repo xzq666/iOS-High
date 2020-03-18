@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XZQPerson_Category (Test)
+@interface XZQPerson_Category (Test) 
+
+@property(nonatomic,assign) int weight;
 
 - (void)run;
 - (void)test;
