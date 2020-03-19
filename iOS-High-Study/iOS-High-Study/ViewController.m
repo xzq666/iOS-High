@@ -73,7 +73,53 @@
 }
 
 - (void)viewDidLoad {
-    [self category];
+    [self block];
+}
+
+int age_ = 100;
+static int height_ = 300;
+
+- (void)block {
+    // 不去调用block不会执行
+    void (^block)(void) = ^{
+        NSLog(@"This is a block");
+    };
+    block();
+    
+    void (^block2)(int, int) = ^(int a, int b){
+        NSLog(@"-->%d, %d", a, b);
+    };
+    block2(10, 20);
+    
+    int age = 10;
+    // block创建时已经将auto变量10捕获了
+    void (^block3)(void) = ^{
+        NSLog(@"-->%d", age);  // 10
+    };
+    age = 20;
+    block3();
+    
+    static int height = 30;
+    void (^block4)(void) = ^{
+        NSLog(@"-->%d", height);
+    };
+    height = 40;
+    block4();
+    
+    void (^block5)(void) = ^{
+        NSLog(@"-->%d, %d, %d", age_, height_, height);
+    };
+    age_ = 200;
+    height_ = 400;
+    block5();
+    
+    NSLog(@"%@", [block5 class]);
+    NSLog(@"%@", [[block5 class] superclass]);
+    NSLog(@"%@", [[[block5 class] superclass] superclass]);
+    NSLog(@"%@", [[[[block5 class] superclass] superclass] superclass]);
+    
+    NSLog(@"%@", [block3 class]);
+    NSLog(@"%@", [^{NSLog(@"age:%d", age);} class]);
 }
 
 - (void)category {

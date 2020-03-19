@@ -62,6 +62,7 @@
 		F0DE558B2420607A007BF97D /* XZQStudent_Category+Test2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XZQStudent_Category+Test2.m"; sourceTree = "<group>"; };
 		F0DE558D24207BC0007BF97D /* XZQTeacher_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Category.h; sourceTree = "<group>"; };
 		F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Category.m; sourceTree = "<group>"; };
+		F0F5BA1F2421C93300EEA7F9 /* block.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = block.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 				F03C1504241B686900876475 /* KVO */,
 				F0D5B8A5241F11CB006284AF /* KVC */,
 				F0D5B8AA241F2101006284AF /* Category */,
+				F0F5BA1E2421C91B00EEA7F9 /* block */,
 				F03DD0102410FE470097D400 /* AppDelegate.h */,
 				F03DD0112410FE470097D400 /* AppDelegate.m */,
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
@@ -163,6 +165,14 @@
 				F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		F0F5BA1E2421C91B00EEA7F9 /* block */ = {
+			isa = PBXGroup;
+			children = (
+				F0F5BA1F2421C93300EEA7F9 /* block.md */,
+			);
+			path = block;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
