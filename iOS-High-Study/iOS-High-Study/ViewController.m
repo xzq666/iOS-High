@@ -18,6 +18,8 @@
 
 #import "XZQStudent_Category.h"
 
+#import "XZQPerson_block.h"
+
 @interface Student : NSObject
 {
     @public
@@ -79,6 +81,8 @@
 int age_ = 100;
 static int height_ = 300;
 
+typedef void (^XZQBlock)(void);
+
 - (void)block {
     // 不去调用block不会执行
     void (^block)(void) = ^{
@@ -120,6 +124,52 @@ static int height_ = 300;
     
     NSLog(@"%@", [block3 class]);
     NSLog(@"%@", [^{NSLog(@"age:%d", age);} class]);
+    
+    NSLog(@"----------");
+    
+    XZQBlock block6;
+    // block强引用person，离开作用域只要block不释放person就不释放（这里的释放指的是类似release的操作）
+    {
+        XZQPerson_block *person = [[XZQPerson_block alloc] init];
+        person.age = 10;
+        block6 = ^{
+            NSLog(@"-->%d", person.age);
+        };
+    }
+    block6();
+    
+    NSLog(@"----------");
+    
+    XZQBlock block7;
+    // block弱引用person，离开作用域即使block不释放person也会释放（这里的释放指的是类似release的操作）
+    {
+        XZQPerson_block *person = [[XZQPerson_block alloc] init];
+        __weak XZQPerson_block *person2 = person;
+        person2.age = 10;
+        block7 = ^{
+            NSLog(@"-->%d", person2.age);
+        };
+    }
+    block7();
+    
+    NSLog(@"----------");
+    
+    age = 10;
+    __block int weight1 = 10;  // 这个变量还是auto
+    static int weight2 = 20;
+    XZQPerson_block *p = [[XZQPerson_block alloc] init];
+    
+    XZQBlock block8 = ^{
+        p.age = 2000;
+        // age = 20; 不能改
+        weight1 = 30;
+        weight2 = 40;
+        NSLog(@"-->%d, %d, %d", age, weight1, weight2);
+    };
+    block8();
+    NSLog(@"-->%d", weight1);
+    NSLog(@"-->%d", p.age);
+    
 }
 
 - (void)category {

@@ -15,6 +15,7 @@
 		F03DD0202410FE4D0097D400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01E2410FE4D0097D400 /* LaunchScreen.storyboard */; };
 		F03DD0232410FE4D0097D400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0222410FE4D0097D400 /* main.m */; };
 		F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D3E497241C6FC8001019DC /* XZQPerson.m */; };
+		F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D51CE724245DE00007EA21 /* XZQPerson_block.m */; };
 		F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8A8241F15D4006284AF /* XZQPerson_KVC.m */; };
 		F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8AD241F221A006284AF /* XZQPerson_Category.m */; };
 		F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8B0241F2249006284AF /* XZQPerson_Category+Test.m */; };
@@ -44,6 +45,8 @@
 		F0D3E495241C6F2C001019DC /* KVO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = KVO.md; sourceTree = "<group>"; };
 		F0D3E496241C6FC8001019DC /* XZQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson.h; sourceTree = "<group>"; };
 		F0D3E497241C6FC8001019DC /* XZQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson.m; sourceTree = "<group>"; };
+		F0D51CE624245DE00007EA21 /* XZQPerson_block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_block.h; sourceTree = "<group>"; };
+		F0D51CE724245DE00007EA21 /* XZQPerson_block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_block.m; sourceTree = "<group>"; };
 		F0D5B8A6241F11E2006284AF /* KVC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = KVC.md; sourceTree = "<group>"; };
 		F0D5B8A7241F15D4006284AF /* XZQPerson_KVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_KVC.h; sourceTree = "<group>"; };
 		F0D5B8A8241F15D4006284AF /* XZQPerson_KVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_KVC.m; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				F0F5BA1F2421C93300EEA7F9 /* block.md */,
+				F0D51CE624245DE00007EA21 /* XZQPerson_block.h */,
+				F0D51CE724245DE00007EA21 /* XZQPerson_block.m */,
 			);
 			path = block;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */,
 				F03DD0122410FE470097D400 /* AppDelegate.m in Sources */,
 				F0DE558624206058007BF97D /* XZQStudent_Category.m in Sources */,
+				F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */,
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
