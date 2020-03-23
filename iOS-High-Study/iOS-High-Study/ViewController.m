@@ -170,6 +170,33 @@ typedef void (^XZQBlock)(void);
     NSLog(@"-->%d", weight1);
     NSLog(@"-->%d", p.age);
     
+    NSLog(@"----------");
+    
+    XZQPerson_block *xp = [[XZQPerson_block alloc] init];
+    xp.age = 10;
+    // __weak：不会产生强引用。指向的对象销毁时会自动让指针置为nil
+    // __unsafe_unretained：不会产生强引用，不安全。指向的对象销毁时，指针指向的地址值不变
+//    __unsafe_unretained typeof(xp) weakXP = xp;
+    __weak typeof(xp) weakXP = xp;
+    xp.block = ^{
+        // 若block与对象之间都是强引用则会产生循环引用
+        // NSLog(@"age is %d", xp.age);
+        NSLog(@"age is %d", weakXP.age);
+    };
+    xp.block();
+    
+    NSLog(@"----------");
+        
+    __block XZQPerson_block *xp2 = [[XZQPerson_block alloc] init];
+    xp2.age = 10;
+    xp2.block = ^{
+        NSLog(@"age is %d", xp2.age);
+        // 必须要清空__block
+        xp2 = nil;
+    };
+    // 必须要调用block
+    xp2.block();
+    
 }
 
 - (void)category {

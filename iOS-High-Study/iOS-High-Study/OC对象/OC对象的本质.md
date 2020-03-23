@@ -8,6 +8,8 @@ Objective-C代码底层实现是C/C++代码。
 
 将Objective-C代码转换为C/C++代码
 xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc OC源文件 -o  输出的cpp文件
+支持ARC、指定运行时系统版本
+xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc -fobjc-arc -fobjc-runtime=ios-8.0.0 main.m
 
 问：一个OC对象在内存中是如何布局的？
 答：NSObject的底层实现

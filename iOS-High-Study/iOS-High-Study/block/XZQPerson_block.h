@@ -10,9 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^XZQBlock) (void);
+
 @interface XZQPerson_block : NSObject
 
 @property(nonatomic,assign) int age;
+@property(nonatomic,copy) XZQBlock block;
 
 @end
 

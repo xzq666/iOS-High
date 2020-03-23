@@ -5,7 +5,7 @@ block是封装了函数调用（函数地址）及函数调用环境（所需要
 
 
 问：block的原理是什么？本质是什么？
-答：
+答：block本质上也是一个OC对象，封装了函数调用及函数调用环境。
 
 
 ### block变量捕获
@@ -52,15 +52,49 @@ __NSConcreteMallocBlock：引用计数增加。
   __block可以用于解决block内部无法修改auto变量值的问题；
   __block不能修饰全局变量、静态变量（static）；
   编译器会将__block变量包装成一个对象。
-
-
-问：__block的作用是什么？有什么使用注意点？
-答：
+  
+  
+  ### __block的内存管理
+  当block在栈上时，并不会对__block变量产生强引用；
+  当block被copy到堆时：
+  1、会调用block内部的copy函数；
+  2、copy函数内部会调用_Block_object_assign函数；
+  3、_Block_object_assign函数会对__block变量形成强引用（retain）。
+  当block从堆中移除时：
+  1、会调用block内部的dispose函数；
+  2、dispose函数内部会调用_Block_object_dispose函数；
+  3、_Block_object_dispose函数会自动释放引用的__block变量（release）。
+  
+  
+  ### 被__block修饰的对象类型
+  当block在栈上时，并不会对__block变量产生强引用；
+  当block被copy到堆时：
+  1、会调用block内部的copy函数；
+  2、copy函数内部会调用_Block_object_assign函数；
+  3、_Block_object_assign函数会根据所指向对象的修饰符（__strong、__weak、__unsafe_unretained）做出相应操作，形成强引用或弱引用
+  （注意这里仅限于ARC，MRC时不会retain）。
+  当block从堆中移除时：
+  1、会调用block内部的dispose函数；
+  2、dispose函数内部会调用_Block_object_dispose函数；
+  3、_Block_object_dispose函数会自动释放所指向的对象（release）。
+  
+  
+  问：__block的作用是什么？有什么使用注意点？
+  答：__block可以用于解决block内部无法修改auto变量值的问题。__block不能修饰全局变量和static静态变量。
+  
+  
+  ### 解决循环引用问题
+  1、ARC
+  1）用__weak、__unsafe_unretained解决。（首选）
+  2）用__block解决（必须要调用block）。
+  2、MRC
+  1）用__unsafe_unretained解决（MRC中没有__weak）。
+  2）用__block解决。（因为MRC中使用__block是不会对所指向对象进行retain）
 
 
 问：block的属性修饰词为什么是copy？使用block有哪些使用注意？
-答：
+答：block进行copy是为了将其copy到堆上，从而自己管理内存。使用block需要注意循环引用的问题。
 
 
 问：block在修改NSMutableArray时需不需要添加__block？
-答：
+答：不需要。

@@ -12,7 +12,15 @@
 
 - (void)dealloc
 {
-    NSLog(@"person dealloc");
+    NSLog(@"%s", __func__);
+}
+
+- (void)test {
+    __weak typeof(self) weakSelf = self;
+    self.block = ^{
+        __strong typeof(weakSelf) mySelf = weakSelf;
+        NSLog(@"%d", mySelf->_age);
+    };
 }
 
 @end
