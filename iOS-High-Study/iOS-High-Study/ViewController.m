@@ -20,6 +20,10 @@
 
 #import "XZQPerson_block.h"
 
+#import "XZQPerson_Runtime.h"
+#import "XZQStudent_Runtime.h"
+#import "XZQTeacher_Runtime.h"
+
 @interface Student : NSObject
 {
     @public
@@ -75,7 +79,49 @@
 }
 
 - (void)viewDidLoad {
-    [self block];
+    [self runtime];
+}
+
+- (void)runtime {
+    XZQPerson_Runtime *person = [[XZQPerson_Runtime alloc] init];
+    [person test];
+    
+    person.tall = NO;
+    person.rich = YES;
+    person.handsome = NO;
+    NSLog(@"-->%d", person.isTall);
+    NSLog(@"-->%d", person.isRich);
+    NSLog(@"-->%d", person.isHandsome);
+    
+    NSLog(@"-->%zd", class_getInstanceSize([XZQPerson_Runtime class]));
+    
+    NSLog(@"----------");
+    
+    XZQStudent_Runtime *student = [[XZQStudent_Runtime alloc] init];
+    student.tall = YES;
+    student.rich = YES;
+    student.handsome = NO;
+    NSLog(@"-->%d", student.isTall);
+    NSLog(@"-->%d", student.isRich);
+    NSLog(@"-->%d", student.isHandsome);
+    
+    NSLog(@"----------");
+    
+    XZQTeacher_Runtime *teacher = [[XZQTeacher_Runtime alloc] init];
+    teacher.tall = YES;
+    teacher.rich = YES;
+    teacher.handsome = NO;
+    NSLog(@"-->%d", teacher.isTall);
+    NSLog(@"-->%d", teacher.isRich);
+    NSLog(@"-->%d", teacher.isHandsome);
+    
+    NSLog(@"----------");
+    
+    // 类对象、元类对象的内存地址末三位一定是0
+    NSLog(@"%p", [ViewController class]);
+    NSLog(@"%p", object_getClass([ViewController class]));
+    NSLog(@"%p", [person class]);
+    NSLog(@"%p", object_getClass([XZQPerson_Runtime class]));
 }
 
 int age_ = 100;

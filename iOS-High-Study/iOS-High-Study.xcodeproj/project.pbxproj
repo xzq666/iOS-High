@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */; };
 		F03DD0122410FE470097D400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0112410FE470097D400 /* AppDelegate.m */; };
 		F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0142410FE470097D400 /* SceneDelegate.m */; };
 		F03DD0182410FE470097D400 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0172410FE470097D400 /* ViewController.m */; };
@@ -14,6 +15,8 @@
 		F03DD01D2410FE4D0097D400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01C2410FE4D0097D400 /* Assets.xcassets */; };
 		F03DD0202410FE4D0097D400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01E2410FE4D0097D400 /* LaunchScreen.storyboard */; };
 		F03DD0232410FE4D0097D400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0222410FE4D0097D400 /* main.m */; };
+		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
+		F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */; };
 		F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D3E497241C6FC8001019DC /* XZQPerson.m */; };
 		F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D51CE724245DE00007EA21 /* XZQPerson_block.m */; };
 		F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8A8241F15D4006284AF /* XZQPerson_KVC.m */; };
@@ -27,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F005BA362429ADD9005C7770 /* XZQTeacher_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Runtime.h; sourceTree = "<group>"; };
+		F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Runtime.m; sourceTree = "<group>"; };
 		F00A8726241A1D00000C1AA7 /* OC对象的分类.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的分类.md"; sourceTree = "<group>"; };
 		F03DD00D2410FE470097D400 /* iOS-High-Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-High-Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03DD0102410FE470097D400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +47,11 @@
 		F03DD0222410FE4D0097D400 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F03DD0292410FF150097D400 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F03DD02B2410FF580097D400 /* OC对象的本质.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的本质.md"; sourceTree = "<group>"; };
+		F0C60D08242996F10044451C /* Runtime.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Runtime.md; sourceTree = "<group>"; };
+		F0C60D09242998D10044451C /* XZQPerson_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_Runtime.h; sourceTree = "<group>"; };
+		F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_Runtime.m; sourceTree = "<group>"; };
+		F0C60D0C24299B370044451C /* XZQStudent_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQStudent_Runtime.h; sourceTree = "<group>"; };
+		F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQStudent_Runtime.m; sourceTree = "<group>"; };
 		F0D3E495241C6F2C001019DC /* KVO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = KVO.md; sourceTree = "<group>"; };
 		F0D3E496241C6FC8001019DC /* XZQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson.h; sourceTree = "<group>"; };
 		F0D3E497241C6FC8001019DC /* XZQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson.m; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 				F0D5B8A5241F11CB006284AF /* KVC */,
 				F0D5B8AA241F2101006284AF /* Category */,
 				F0F5BA1E2421C91B00EEA7F9 /* block */,
+				F0C60D07242996DE0044451C /* Runtime */,
 				F03DD0102410FE470097D400 /* AppDelegate.h */,
 				F03DD0112410FE470097D400 /* AppDelegate.m */,
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
@@ -136,6 +147,20 @@
 				F00A8726241A1D00000C1AA7 /* OC对象的分类.md */,
 			);
 			path = "OC对象";
+			sourceTree = "<group>";
+		};
+		F0C60D07242996DE0044451C /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				F0C60D08242996F10044451C /* Runtime.md */,
+				F0C60D09242998D10044451C /* XZQPerson_Runtime.h */,
+				F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */,
+				F0C60D0C24299B370044451C /* XZQStudent_Runtime.h */,
+				F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */,
+				F005BA362429ADD9005C7770 /* XZQTeacher_Runtime.h */,
+				F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		F0D5B8A5241F11CB006284AF /* KVC */ = {
@@ -253,6 +278,8 @@
 				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
+				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
+				F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */,
 				F03DD0182410FE470097D400 /* ViewController.m in Sources */,
 				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
 				F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */,
@@ -261,6 +288,7 @@
 				F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */,
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
+				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
 				F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */,
