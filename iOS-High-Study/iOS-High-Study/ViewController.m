@@ -122,6 +122,13 @@
     NSLog(@"%p", object_getClass([ViewController class]));
     NSLog(@"%p", [person class]);
     NSLog(@"%p", object_getClass([XZQPerson_Runtime class]));
+    
+    NSLog(@"----------");
+    
+    NSLog(@"%s", @encode(int));
+    NSLog(@"%s", @encode(char));
+    NSLog(@"%s", @encode(id));
+    NSLog(@"%s", @encode(SEL));
 }
 
 int age_ = 100;
