@@ -23,6 +23,8 @@
 #import "XZQPerson_Runtime.h"
 #import "XZQStudent_Runtime.h"
 #import "XZQTeacher_Runtime.h"
+#import "MJClassInfo.h"
+#import "XZQSonOfSon_Runtime.h"
 
 @interface Student : NSObject
 {
@@ -129,6 +131,52 @@
     NSLog(@"%s", @encode(char));
     NSLog(@"%s", @encode(id));
     NSLog(@"%s", @encode(SEL));
+    
+    NSLog(@"----------");
+    
+//    XZQFather_Runtime *father = [[XZQFather_Runtime alloc] init];
+//    mj_objc_class *fatherClass = (__bridge mj_objc_class *)[XZQFather_Runtime class];
+//    [father fatherTest];
+    
+    XZQSonOfSon_Runtime *sonOfSon = [[XZQSonOfSon_Runtime alloc] init];
+    mj_objc_class *sonOfSonClass = (__bridge mj_objc_class *)[XZQSonOfSon_Runtime class];
+    [sonOfSon sonOfSonTest];
+    [sonOfSon sonTest];
+    [sonOfSon fatherTest];
+    [sonOfSon sonOfSonTest];
+    [sonOfSon sonTest];
+    cache_t cache = sonOfSonClass->cache;
+    bucket_t *buckets = cache._buckets;
+    for (int i = 0; i < cache._mask + 1; i++) {
+        bucket_t bucket = buckets[i];
+        NSLog(@"%s, %p", bucket._key, bucket._imp);
+    }
+    bucket_t bucket = buckets[(long long)@selector(fatherTest) & cache._mask];
+    NSLog(@"%s, %p", bucket._key, bucket._imp);
+    NSLog(@"%s, %p", @selector(fatherTest), cache.imp(@selector(fatherTest)));
+    NSLog(@"%s, %p", @selector(sonTest), cache.imp(@selector(sonTest)));
+    NSLog(@"%s, %p", @selector(sonOfSonTest), cache.imp(@selector(sonOfSonTest)));
+    
+    NSLog(@"----------");
+    
+    // OC的方法调用：消息机制，给方法调用者发送消息
+    XZQFather_Runtime *father = [[XZQFather_Runtime alloc] init];
+    // objc_msgSend(father, @selector(fatherTest));
+    // 消息接收者：father
+    // 消息名称：fatherTest
+    [father fatherTest];
+    // objc_msgSend([XZQFather_Runtime class], @selector(initialize));
+    // 消息接收者：[XZQFather_Runtime class]
+    // 消息名称：initialize
+    [XZQFather_Runtime initialize];
+    NSLog(@"%p %p", sel_registerName("fatherTest"), @selector(fatherTest));
+    
+    NSLog(@"----------");
+    
+    [father test];
+    [father test];
+    [XZQFather_Runtime test];
+    [XZQFather_Runtime test];
 }
 
 int age_ = 100;
@@ -307,7 +355,8 @@ typedef void (^XZQBlock)(void);
     NSLog(@"person1添加KVO之前类对象 - %@ %@", object_getClass(self.person1), object_getClass(self.person2));
     
     // 给person1添加KVO对象
-    [self.person1 addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:@"123"];
+    char *context;
+    [self.person1 addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:&context];
     [self.person1 addObserver:self forKeyPath:@"height" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     
     NSLog(@"person1添加KVO之后 - %@ %@", object_getClass(self.person1), object_getClass(self.person2));

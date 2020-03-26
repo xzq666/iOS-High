@@ -105,7 +105,17 @@ explicit_atomic<mask_t> _mask;  // 散列表的长度-1
 bucket_t核心结构
 explicit_atomic<SEL> _sel;  // SEL作为key
 explicit_atomic<uintptr_t> _imp;  // 函数的内存地址
-"
+
+
+### objc_msgSend执行流程
+
+OC中的方法调用其实都是转换为objc_msgSend函数的调用。
+objc_msgSend的执行流程可以分为3大阶段：
+1、消息发送
+![avatar](./消息发送.png)
+2、动态方法解析
+![avatar](./动态方法解析.png)
+3、消息转发
 
 
 问：讲一下OC的消息机制？

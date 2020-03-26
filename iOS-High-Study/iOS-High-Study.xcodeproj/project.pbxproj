@@ -10,7 +10,7 @@
 		F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */; };
 		F03DD0122410FE470097D400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0112410FE470097D400 /* AppDelegate.m */; };
 		F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0142410FE470097D400 /* SceneDelegate.m */; };
-		F03DD0182410FE470097D400 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0172410FE470097D400 /* ViewController.m */; };
+		F03DD0182410FE470097D400 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0172410FE470097D400 /* ViewController.mm */; };
 		F03DD01B2410FE470097D400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03DD0192410FE470097D400 /* Main.storyboard */; };
 		F03DD01D2410FE4D0097D400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01C2410FE4D0097D400 /* Assets.xcassets */; };
 		F03DD0202410FE4D0097D400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01E2410FE4D0097D400 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,11 @@
 		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
 		F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */; };
 		F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D3E497241C6FC8001019DC /* XZQPerson.m */; };
+		F0D44EDA242C424600ADE4B4 /* XZQFather_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D44ED9242C424600ADE4B4 /* XZQFather_Runtime.m */; };
+		F0D44EDD242C425900ADE4B4 /* XZQSon_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D44EDC242C425900ADE4B4 /* XZQSon_Runtime.m */; };
+		F0D44EE0242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D44EDF242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m */; };
+		F0D44EE3242C614100ADE4B4 /* 动态方法解析.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0D44EE1242C614100ADE4B4 /* 动态方法解析.jpg */; };
+		F0D44EE4242C614100ADE4B4 /* 消息发送.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0D44EE2242C614100ADE4B4 /* 消息发送.jpg */; };
 		F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D51CE724245DE00007EA21 /* XZQPerson_block.m */; };
 		F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8A8241F15D4006284AF /* XZQPerson_KVC.m */; };
 		F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D5B8AD241F221A006284AF /* XZQPerson_Category.m */; };
@@ -39,7 +44,7 @@
 		F03DD0132410FE470097D400 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		F03DD0142410FE470097D400 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		F03DD0162410FE470097D400 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F03DD0172410FE470097D400 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F03DD0172410FE470097D400 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		F03DD01A2410FE470097D400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F03DD01C2410FE4D0097D400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F03DD01F2410FE4D0097D400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +60,15 @@
 		F0D3E495241C6F2C001019DC /* KVO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = KVO.md; sourceTree = "<group>"; };
 		F0D3E496241C6FC8001019DC /* XZQPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson.h; sourceTree = "<group>"; };
 		F0D3E497241C6FC8001019DC /* XZQPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson.m; sourceTree = "<group>"; };
+		F0D44ED7242C41AB00ADE4B4 /* MJClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJClassInfo.h; sourceTree = "<group>"; };
+		F0D44ED8242C424600ADE4B4 /* XZQFather_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQFather_Runtime.h; sourceTree = "<group>"; };
+		F0D44ED9242C424600ADE4B4 /* XZQFather_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQFather_Runtime.m; sourceTree = "<group>"; };
+		F0D44EDB242C425900ADE4B4 /* XZQSon_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSon_Runtime.h; sourceTree = "<group>"; };
+		F0D44EDC242C425900ADE4B4 /* XZQSon_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSon_Runtime.m; sourceTree = "<group>"; };
+		F0D44EDE242C426D00ADE4B4 /* XZQSonOfSon_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSonOfSon_Runtime.h; sourceTree = "<group>"; };
+		F0D44EDF242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSonOfSon_Runtime.m; sourceTree = "<group>"; };
+		F0D44EE1242C614100ADE4B4 /* 动态方法解析.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "动态方法解析.jpg"; sourceTree = "<group>"; };
+		F0D44EE2242C614100ADE4B4 /* 消息发送.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "消息发送.jpg"; sourceTree = "<group>"; };
 		F0D51CE624245DE00007EA21 /* XZQPerson_block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_block.h; sourceTree = "<group>"; };
 		F0D51CE724245DE00007EA21 /* XZQPerson_block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_block.m; sourceTree = "<group>"; };
 		F0D5B8A6241F11E2006284AF /* KVC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = KVC.md; sourceTree = "<group>"; };
@@ -129,7 +143,7 @@
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
 				F03DD0142410FE470097D400 /* SceneDelegate.m */,
 				F03DD0162410FE470097D400 /* ViewController.h */,
-				F03DD0172410FE470097D400 /* ViewController.m */,
+				F03DD0172410FE470097D400 /* ViewController.mm */,
 				F03DD0192410FE470097D400 /* Main.storyboard */,
 				F03DD01C2410FE4D0097D400 /* Assets.xcassets */,
 				F03DD01E2410FE4D0097D400 /* LaunchScreen.storyboard */,
@@ -152,7 +166,16 @@
 		F0C60D07242996DE0044451C /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				F0D44EE1242C614100ADE4B4 /* 动态方法解析.jpg */,
+				F0D44EE2242C614100ADE4B4 /* 消息发送.jpg */,
 				F0C60D08242996F10044451C /* Runtime.md */,
+				F0D44ED7242C41AB00ADE4B4 /* MJClassInfo.h */,
+				F0D44ED8242C424600ADE4B4 /* XZQFather_Runtime.h */,
+				F0D44ED9242C424600ADE4B4 /* XZQFather_Runtime.m */,
+				F0D44EDB242C425900ADE4B4 /* XZQSon_Runtime.h */,
+				F0D44EDC242C425900ADE4B4 /* XZQSon_Runtime.m */,
+				F0D44EDE242C426D00ADE4B4 /* XZQSonOfSon_Runtime.h */,
+				F0D44EDF242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m */,
 				F0C60D09242998D10044451C /* XZQPerson_Runtime.h */,
 				F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */,
 				F0C60D0C24299B370044451C /* XZQStudent_Runtime.h */,
@@ -264,7 +287,9 @@
 			files = (
 				F03DD0202410FE4D0097D400 /* LaunchScreen.storyboard in Resources */,
 				F03DD01D2410FE4D0097D400 /* Assets.xcassets in Resources */,
+				F0D44EE4242C614100ADE4B4 /* 消息发送.jpg in Resources */,
 				F03DD01B2410FE470097D400 /* Main.storyboard in Resources */,
+				F0D44EE3242C614100ADE4B4 /* 动态方法解析.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D44EDA242C424600ADE4B4 /* XZQFather_Runtime.m in Sources */,
 				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
 				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
 				F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */,
-				F03DD0182410FE470097D400 /* ViewController.m in Sources */,
+				F03DD0182410FE470097D400 /* ViewController.mm in Sources */,
+				F0D44EE0242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m in Sources */,
 				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
 				F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */,
 				F03DD0122410FE470097D400 /* AppDelegate.m in Sources */,
@@ -288,6 +315,7 @@
 				F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */,
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
+				F0D44EDD242C425900ADE4B4 /* XZQSon_Runtime.m in Sources */,
 				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
