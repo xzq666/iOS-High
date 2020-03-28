@@ -111,25 +111,31 @@ explicit_atomic<uintptr_t> _imp;  // 函数的内存地址
 
 OC中的方法调用其实都是转换为objc_msgSend函数的调用。
 objc_msgSend的执行流程可以分为3大阶段：
-1、消息发送
+1、消息发送</br>
 ![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/消息发送.jpg)
-2、动态方法解析
+2、动态方法解析</br>
 ![avatar](https://github.com/xzq666/iOS-High/blob/master/iOS-High-Study/iOS-High-Study/Runtime/动态方法解析.jpg)
-3、消息转发
+3、消息转发</br>
+将消息转发给别人。
 
 
 问：讲一下OC的消息机制？
-答：
+答：OC中的方法调用其实都是转成了objc_msgSend函数的调用，给receiver（方法调用者）发送了一条消息（selector方法名）。
+objc_msgSend底层有三大阶段：消息发送（当前类、父类中查找）、动态方法解析、消息转发。
 
 
 问：消息转发机制流程？
-答：
+答： 
+1、调用forwardingTargetForSelector:方法，若返回值不为nil，则调用objc_msgSend(返回值, SEL)；若返回nil，则调用methodSignatureForSelector:方法。
+2、若返回值不为nil，则调用forwardInvocation:方法；若为nil则调用doesNotRecognizeSelector:方法。
+
+
+### super
+
+[super message]的底层实现
+1、消息接收者仍然是子类对象。
+2、从父类开始查找方法的实现。
 
 
 问：什么是Runtime？平时项目中有用过吗？
 答：
-
-
-问：
-答：
-

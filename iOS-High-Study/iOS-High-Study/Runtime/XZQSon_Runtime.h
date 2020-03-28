@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)sonTest;
 
++ (void)test:(int)age;
+
 @end
 
 NS_ASSUME_NONNULL_END

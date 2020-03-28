@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */; };
+		F00FB548242D8CF20021BAA2 /* 消息转发.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F00FB547242D8CF20021BAA2 /* 消息转发.jpg */; };
 		F03DD0122410FE470097D400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0112410FE470097D400 /* AppDelegate.m */; };
 		F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0142410FE470097D400 /* SceneDelegate.m */; };
 		F03DD0182410FE470097D400 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0172410FE470097D400 /* ViewController.mm */; };
@@ -15,6 +16,8 @@
 		F03DD01D2410FE4D0097D400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01C2410FE4D0097D400 /* Assets.xcassets */; };
 		F03DD0202410FE4D0097D400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03DD01E2410FE4D0097D400 /* LaunchScreen.storyboard */; };
 		F03DD0232410FE4D0097D400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0222410FE4D0097D400 /* main.m */; };
+		F06A7B8A242F2CFD003BFA0D /* XZQPerson_super.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A7B89242F2CFD003BFA0D /* XZQPerson_super.m */; };
+		F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */; };
 		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
 		F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */; };
 		F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D3E497241C6FC8001019DC /* XZQPerson.m */; };
@@ -38,6 +41,7 @@
 		F005BA362429ADD9005C7770 /* XZQTeacher_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Runtime.h; sourceTree = "<group>"; };
 		F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Runtime.m; sourceTree = "<group>"; };
 		F00A8726241A1D00000C1AA7 /* OC对象的分类.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的分类.md"; sourceTree = "<group>"; };
+		F00FB547242D8CF20021BAA2 /* 消息转发.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "消息转发.jpg"; sourceTree = "<group>"; };
 		F03DD00D2410FE470097D400 /* iOS-High-Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-High-Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03DD0102410FE470097D400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F03DD0112410FE470097D400 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,6 +56,11 @@
 		F03DD0222410FE4D0097D400 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F03DD0292410FF150097D400 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F03DD02B2410FF580097D400 /* OC对象的本质.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的本质.md"; sourceTree = "<group>"; };
+		F06A7B88242F2CFD003BFA0D /* XZQPerson_super.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_super.h; sourceTree = "<group>"; };
+		F06A7B89242F2CFD003BFA0D /* XZQPerson_super.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_super.m; sourceTree = "<group>"; };
+		F06A7B8B242F2D0D003BFA0D /* XZQSon_super.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSon_super.h; sourceTree = "<group>"; };
+		F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSon_super.m; sourceTree = "<group>"; };
+		F06A7B8E242F364A003BFA0D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F0C60D08242996F10044451C /* Runtime.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Runtime.md; sourceTree = "<group>"; };
 		F0C60D09242998D10044451C /* XZQPerson_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_Runtime.h; sourceTree = "<group>"; };
 		F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_Runtime.m; sourceTree = "<group>"; };
@@ -148,6 +157,7 @@
 				F03DD01C2410FE4D0097D400 /* Assets.xcassets */,
 				F03DD01E2410FE4D0097D400 /* LaunchScreen.storyboard */,
 				F03DD0212410FE4D0097D400 /* Info.plist */,
+				F06A7B8E242F364A003BFA0D /* main.cpp */,
 				F03DD0222410FE4D0097D400 /* main.m */,
 				F03DD0292410FF150097D400 /* README.md */,
 			);
@@ -163,9 +173,22 @@
 			path = "OC对象";
 			sourceTree = "<group>";
 		};
+		F06A7B87242F2CD5003BFA0D /* super */ = {
+			isa = PBXGroup;
+			children = (
+				F06A7B88242F2CFD003BFA0D /* XZQPerson_super.h */,
+				F06A7B89242F2CFD003BFA0D /* XZQPerson_super.m */,
+				F06A7B8B242F2D0D003BFA0D /* XZQSon_super.h */,
+				F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */,
+			);
+			path = super;
+			sourceTree = "<group>";
+		};
 		F0C60D07242996DE0044451C /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				F06A7B87242F2CD5003BFA0D /* super */,
+				F00FB547242D8CF20021BAA2 /* 消息转发.jpg */,
 				F0D44EE1242C614100ADE4B4 /* 动态方法解析.jpg */,
 				F0D44EE2242C614100ADE4B4 /* 消息发送.jpg */,
 				F0C60D08242996F10044451C /* Runtime.md */,
@@ -290,6 +313,7 @@
 				F0D44EE4242C614100ADE4B4 /* 消息发送.jpg in Resources */,
 				F03DD01B2410FE470097D400 /* Main.storyboard in Resources */,
 				F0D44EE3242C614100ADE4B4 /* 动态方法解析.jpg in Resources */,
+				F00FB548242D8CF20021BAA2 /* 消息转发.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +328,14 @@
 				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
+				F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */,
 				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
 				F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */,
 				F03DD0182410FE470097D400 /* ViewController.mm in Sources */,
 				F0D44EE0242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m in Sources */,
 				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
 				F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */,
+				F06A7B8A242F2CFD003BFA0D /* XZQPerson_super.m in Sources */,
 				F03DD0122410FE470097D400 /* AppDelegate.m in Sources */,
 				F0DE558624206058007BF97D /* XZQStudent_Category.m in Sources */,
 				F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */,

@@ -25,6 +25,7 @@
 #import "XZQTeacher_Runtime.h"
 #import "MJClassInfo.h"
 #import "XZQSonOfSon_Runtime.h"
+#import "XZQSon_super.h"
 
 @interface Student : NSObject
 {
@@ -174,9 +175,32 @@
     NSLog(@"----------");
     
     [father test];
+    [XZQFather_Runtime test];
     [father test];
     [XZQFather_Runtime test];
-    [XZQFather_Runtime test];
+    
+    NSLog(@"----------");
+    
+    [XZQSon_Runtime test:100];
+    
+    NSLog(@"----------");
+    
+    [[XZQSon_super alloc] init];
+    /*
+     +isKindOfClass：
+     for (Class tcls = self->ISA(); tcls; tcls = tcls->superclass) {
+         if (tcls == cls) return YES;
+     }
+     return NO;
+     
+     +isMemberOfClass
+     return self->ISA() == cls;
+     */
+    BOOL ret1 = [[NSObject class] isKindOfClass:[NSObject class]];
+    BOOL ret2 = [[NSObject class] isMemberOfClass:[NSObject class]];
+    BOOL ret3 = [[XZQPerson_super class] isKindOfClass:[XZQPerson_super class]];
+    BOOL ret4 = [[XZQPerson_super class] isMemberOfClass:[XZQPerson_super class]];
+    NSLog(@"%d, %d, %d, %d", ret1, ret2, ret3, ret4);
 }
 
 int age_ = 100;

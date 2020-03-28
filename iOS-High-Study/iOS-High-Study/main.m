@@ -13,6 +13,9 @@ int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
+        BOOL ret1 = [[NSObject class] isKindOfClass:[NSObject class]];
+        NSLog(@"ret1:%d", ret1);
+        
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
