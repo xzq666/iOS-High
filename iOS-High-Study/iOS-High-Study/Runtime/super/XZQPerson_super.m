@@ -10,4 +10,8 @@
 
 @implementation XZQPerson_super
 
+- (void)print {
+    NSLog(@"name is %@", self.name);
+}
+
 @end

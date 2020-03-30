@@ -82,7 +82,22 @@
 }
 
 - (void)viewDidLoad {
-    [self runtime];
+    [super viewDidLoad];
+    
+//    [self runtime];
+    
+    /*
+     1.print为什么能够调用
+     obj->cls->XZQPerson_super类对象  相当于  person->XZQPerson_super实例对象isa->XZQPerson_super类对象
+     
+     2.为什么print打印变成了ViewController
+     调用方法时会把obj当成XZQPerson_super实例对象，先根据isa指针找到print方法，print方法里用到的_name在isa指针后面，
+     也就是通过跳8个字节找到的下一个指针指向的变量就会当成_name。
+     */
+//    NSString *s = @"123";
+    id cls = [XZQPerson_super class];
+    void *obj = &cls;
+    [(__bridge id)obj print];
 }
 
 - (void)runtime {
