@@ -45,4 +45,8 @@
     return _tallRichHandsome.handsome;
 }
 
+- (void)run {
+    NSLog(@"%s", __func__);
+}
+
 @end

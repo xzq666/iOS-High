@@ -138,5 +138,99 @@ objc_msgSend底层有三大阶段：消息发送（当前类、父类中查找�
 2、从父类开始查找方法的实现。
 
 
+### LLVM
+
+OC -> 中间代码(.ll) -> 汇编、机器代码
+
+
+### Runtime应用
+
+1、查看私有成员变量（例如设置UITextField占位文字的颜色）。<br/>
+2、
+1）字典转模型（利用Runtime遍历所有的属性或成员变量，利用KVC设值）。
+2）替换方法实现（class_replaceMethod、method_exchangeImplementations）。<br/>
+
+
+### Runtime API
+
+1、类<br/>
+动态创建一个类（参数：父类，类名，额外的内存空间）<br/>
+Class objc_allocateClassPair(Class superclass, const char *name, size_t extraBytes)<br/>
+注册一个类（要在类注册之前添加成员变量）<br/>
+void objc_registerClassPair(Class cls) <br/>
+销毁一个类<br/>
+void objc_disposeClassPair(Class cls)<br/>
+获取isa指向的Class<br/>
+Class object_getClass(id obj)
+设置isa指向的Class<br/>
+Class object_setClass(id obj, Class cls)
+判断一个OC对象是否为Class<br/>
+BOOL object_isClass(id obj)
+判断一个Class是否为元类<br/>
+BOOL class_isMetaClass(Class cls)
+获取父类<br/>
+Class class_getSuperclass(Class cls)
+
+2、成员变量<br/>
+获取一个实例变量信息<br/>
+Ivar class_getInstanceVariable(Class cls, const char *name)<br/>
+拷贝实例变量列表（最后需要调用free释放）<br/>
+Ivar *class_copyIvarList(Class cls, unsigned int *outCount)<br/>
+设置和获取成员变量的值<br/>
+void object_setIvar(id obj, Ivar ivar, id value)<br/>
+id object_getIvar(id obj, Ivar ivar)<br/>
+动态添加成员变量（已经注册的类是不能动态添加成员变量的）<br/>
+BOOL class_addIvar(Class cls, const char * name, size_t size, uint8_t alignment, const char * types)<br/>
+获取成员变量的相关信息<br/>
+const char *ivar_getName(Ivar v)<br/>
+const char *ivar_getTypeEncoding(Ivar v)<br/>
+
+3、属性<br/>
+获取一个属性<br/>
+objc_property_t class_getProperty(Class cls, const char *name)<br/>
+拷贝属性列表（最后需要调用free释放）<br/>
+objc_property_t *class_copyPropertyList(Class cls, unsigned int *outCount)<br/>
+动态添加属性<br/>
+BOOL class_addProperty(Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount)<br/>
+动态替换属性<br/>
+void class_replaceProperty(Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount)<br/>
+获取属性的一些信息<br/>
+const char *property_getName(objc_property_t property)<br/>
+const char *property_getAttributes(objc_property_t property)<br/>
+
+4、方法<br/>
+获得一个实例方法、类方法<br/>
+Method class_getInstanceMethod(Class cls, SEL name)<br/>
+Method class_getClassMethod(Class cls, SEL name)<br/>
+方法实现相关操作<br/>
+IMP class_getMethodImplementation(Class cls, SEL name) <br/>
+IMP method_setImplementation(Method m, IMP imp)<br/>
+void method_exchangeImplementations(Method m1, Method m2) <br/>
+拷贝方法列表（最后需要调用free释放）
+Method *class_copyMethodList(Class cls, unsigned int *outCount)<br/>
+动态添加方法<br/>
+BOOL class_addMethod(Class cls, SEL name, IMP imp, const char *types)<br/>
+动态替换方法
+IMP class_replaceMethod(Class cls, SEL name, IMP imp, const char *types)<br/>
+获取方法的相关信息（带有copy的需要调用free去释放）<br/>
+SEL method_getName(Method m)<br/>
+IMP method_getImplementation(Method m)<br/>
+const char *method_getTypeEncoding(Method m)<br/>
+unsigned int method_getNumberOfArguments(Method m)<br/>
+char *method_copyReturnType(Method m)<br/>
+char *method_copyArgumentType(Method m, unsigned int index)<br/>
+选择器相关<br/>
+const char *sel_getName(SEL sel)<br/>
+SEL sel_registerName(const char *str)<br/>
+用block作为方法实现<br/>
+IMP imp_implementationWithBlock(id block)<br/>
+id imp_getBlock(IMP anImp)<br/>
+BOOL imp_removeBlock(IMP anImp)<br/>
+
+
 问：什么是Runtime？平时项目中有用过吗？</br>
-答：
+答：OC是一门动态性比较强的编程语言，它的动态性允许很多操作推迟到程序程序运行时再进行。OC的动态性都是由Runtime API来支撑的，封装了很多动态性相关的函数。平时编写的OC代码，底层都是转换为Runtime API进行调用的。
+1、利用关联对象（AssociatedObject）给分类添加属性。
+2、遍历类的所有成员变量（修改textField的占位符文字颜色、字典转模型、自动归档解档）。
+3、交换方法实现（交换系统的方法）。
+4、利用消息转发机制解决找不到方法的异常问题

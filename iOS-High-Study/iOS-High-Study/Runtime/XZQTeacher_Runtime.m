@@ -64,4 +64,8 @@
     return !!(_tallRichHandsome.bits & XZQHANDSOMEMASK);
 }
 
+- (void)run {
+    NSLog(@"%s", __func__);
+}
+
 @end

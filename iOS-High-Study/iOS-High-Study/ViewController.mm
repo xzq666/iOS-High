@@ -84,7 +84,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self runtime];
+    [self runtime];
     
     /*
      1.print为什么能够调用
@@ -95,9 +95,14 @@
      也就是通过跳8个字节找到的下一个指针指向的变量就会当成_name。
      */
 //    NSString *s = @"123";
-    id cls = [XZQPerson_super class];
-    void *obj = &cls;
-    [(__bridge id)obj print];
+//    id cls = [XZQPerson_super class];
+//    void *obj = &cls;
+//    [(__bridge id)obj print];
+}
+
+void run(id self, SEL _cmd)
+{
+    NSLog(@"c_other %@ - %@", self, NSStringFromSelector(_cmd));
 }
 
 - (void)runtime {
@@ -216,6 +221,68 @@
     BOOL ret3 = [[XZQPerson_super class] isKindOfClass:[XZQPerson_super class]];
     BOOL ret4 = [[XZQPerson_super class] isMemberOfClass:[XZQPerson_super class]];
     NSLog(@"%d, %d, %d, %d", ret1, ret2, ret3, ret4);
+    
+    NSLog(@"----------");
+    
+    XZQStudent_Runtime *ss = [[XZQStudent_Runtime alloc] init];
+    [ss run];
+    
+    object_setClass(ss, [XZQTeacher_Runtime class]);
+    [ss run];
+    
+    NSLog(@"----------");
+    
+    // 创建一个类：父类 类名 额外分配的字节数
+    Class newClass = objc_allocateClassPair([NSObject class], "XZQDog", 0);
+    // 添加成员变量：类 变量名 占字节数 字节对齐 类型
+    class_addIvar(newClass, "_age", 4, 1, @encode(int));
+    class_addIvar(newClass, "_weight", 4, 1, @encode(int));
+    // 添加方法
+    class_addMethod(newClass, @selector(run), (IMP)run, "v16@0:8");
+    // 注册类
+    objc_registerClassPair(newClass);
+    id dog = [[newClass alloc] init];
+    [dog setValue:@10 forKey:@"_age"];
+    [dog setValue:@20 forKey:@"_weight"];
+    NSLog(@"%zd", class_getInstanceSize(newClass));
+    NSLog(@"%zd", malloc_size((__bridge const void *)dog));
+    NSLog(@"%@, %@", [dog valueForKey:@"_age"], [dog valueForKey:@"_weight"]);
+    [dog run];
+    object_setClass(dog, [XZQTeacher_Runtime class]);
+    [dog run];
+    // 获取成员变量信息
+    XZQPerson_super *ps = [[XZQPerson_super alloc] init];
+    Ivar ageIvar = class_getInstanceVariable([XZQPerson_super class], "_hight");
+    NSLog(@"%s - %s", ivar_getName(ageIvar), ivar_getTypeEncoding(ageIvar));
+    object_setIvar(ps, ageIvar, (__bridge id)(void *)100);
+    NSLog(@"%d", ps.hight);
+    [ps setValue:@200 forKey:@"weight"];
+    NSLog(@"weight:%d", ps.weight);
+    NSLog(@"----------");
+    
+    // 成员变量的数量
+    unsigned int count;
+    Ivar *ivars = class_copyIvarList([XZQPerson_super class], &count);
+    for (int i = 0; i < count; i++) {
+        Ivar ivar = ivars[i];
+        NSLog(@"%s - %s", ivar_getName(ivar), ivar_getTypeEncoding(ivar));
+    }
+    free(ivars);
+    
+    // 方法替换
+    ps.name = @"xzq";
+    [ps print];
+    class_replaceMethod([XZQPerson_super class], @selector(print), (IMP)run, "v16@0:8");
+    [ps print];
+    class_replaceMethod([XZQPerson_super class], @selector(print), imp_implementationWithBlock(^{
+        NSLog(@"imp block");
+    }), "v");
+    [ps print];
+    Method method1 = class_getInstanceMethod([XZQPerson_super class], @selector(test1));
+    Method method2 = class_getInstanceMethod([XZQPerson_super class], @selector(test2));
+    method_exchangeImplementations(method1, method2);
+    [ps test1];
+    [ps test2];
 }
 
 int age_ = 100;

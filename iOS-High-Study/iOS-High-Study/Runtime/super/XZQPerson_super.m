@@ -14,4 +14,12 @@
     NSLog(@"name is %@", self.name);
 }
 
+- (void)test1 {
+    NSLog(@"%s", __func__);
+}
+
+- (void)test2 {
+    NSLog(@"%s", __func__);
+}
+
 @end

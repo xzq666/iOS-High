@@ -12,9 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XZQPerson_super : NSObject
 
+@property(nonatomic,assign) int hight;
+@property(nonatomic,assign) int weight;
 @property(nonatomic,copy) NSString *name;
 
 - (void)print;
+
+- (void)test1;
+- (void)test2;
 
 @end
 
