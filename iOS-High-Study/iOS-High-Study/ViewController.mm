@@ -84,7 +84,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self runtime];
+    [self runloop];
     
     /*
      1.print为什么能够调用
@@ -98,6 +98,78 @@
 //    id cls = [XZQPerson_super class];
 //    void *obj = &cls;
 //    [(__bridge id)obj print];
+}
+
+void observeRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info)
+{
+    switch (activity) {
+        case kCFRunLoopEntry:
+            NSLog(@"kCFRunLoopEntry");
+            break;
+            
+        case kCFRunLoopBeforeTimers:
+            NSLog(@"kCFRunLoopBeforeTimers");
+            break;
+            
+        case kCFRunLoopBeforeSources:
+            NSLog(@"kCFRunLoopBeforeSources");
+            break;
+            
+        case kCFRunLoopBeforeWaiting:
+            NSLog(@"kCFRunLoopBeforeWaiting");
+            break;
+            
+        case kCFRunLoopAfterWaiting:
+            NSLog(@"kCFRunLoopAfterWaiting");
+            break;
+            
+        case kCFRunLoopExit:
+            NSLog(@"kCFRunLoopExit");
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)runloop {
+    // NSRunLoop是基于CFRunLoopRef的一层OC包装
+    NSLog(@"%p - %p", [NSRunLoop currentRunLoop], [NSRunLoop mainRunLoop]);
+    NSLog(@"%p - %p", CFRunLoopGetCurrent(), CFRunLoopGetMain());
+    
+    // 创建Observer
+//    CFRunLoopObserverRef observer = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, observeRunLoopActivities, NULL);
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+            case kCFRunLoopEntry: {
+                CFRunLoopMode mode = CFRunLoopCopyCurrentMode(CFRunLoopGetCurrent());
+                NSLog(@"kCFRunLoopEntry - %@", mode);
+                CFRelease(mode);
+                break;
+            }
+                
+            case kCFRunLoopExit: {
+                CFRunLoopMode mode = CFRunLoopCopyCurrentMode(CFRunLoopGetCurrent());
+                NSLog(@"kCFRunLoopExit - %@", mode);
+                CFRelease(mode);
+                break;
+            }
+                
+            default:
+                break;
+        }
+    });
+    // 添加observer
+    // kCFRunLoopCommonModes默认包括kCFRunLoopDefaultMode和UITrackingRunLoopMode
+    CFRunLoopAddObserver(CFRunLoopGetMain(), observer, kCFRunLoopCommonModes);
+    // 释放
+    CFRelease(observer);
+    
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 100, 300, 50)];
+    textView.backgroundColor = [UIColor systemGrayColor];
+    textView.font = [UIFont systemFontOfSize:16.0f];
+    textView.text = @"dhaksjdgsufgsdihsdfshdfgsldlafjkadsgalfjsdkfgasldkjfgsdakjfgdslfjasdlgfdskjfasdfsdagdsfsfdsafasdfasdfsdfasdf";
+    [self.view addSubview:textView];
 }
 
 void run(id self, SEL _cmd)
@@ -258,6 +330,7 @@ void run(id self, SEL _cmd)
     NSLog(@"%d", ps.hight);
     [ps setValue:@200 forKey:@"weight"];
     NSLog(@"weight:%d", ps.weight);
+    
     NSLog(@"----------");
     
     // 成员变量的数量
@@ -283,6 +356,53 @@ void run(id self, SEL _cmd)
     method_exchangeImplementations(method1, method2);
     [ps test1];
     [ps test2];
+    
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn1.frame = CGRectMake(10, 100, 80, 30);
+    [btn1 setTitle:@"btn1" forState:UIControlStateNormal];
+    [self.view addSubview:btn1];
+    [btn1 addTarget:self action:@selector(btnClick1) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn2.frame = CGRectMake(100, 100, 80, 30);
+    [btn2 setTitle:@"btn2" forState:UIControlStateNormal];
+    [self.view addSubview:btn2];
+    [btn2 addTarget:self action:@selector(btnClick2) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn3.frame = CGRectMake(190, 100, 80, 30);
+    [btn3 setTitle:@"btn3" forState:UIControlStateNormal];
+    [self.view addSubview:btn3];
+    [btn3 addTarget:self action:@selector(btnClick3) forControlEvents:UIControlEventTouchUpInside];
+    
+    NSLog(@"----------");
+    
+    NSString *obj = nil;
+    NSMutableArray *array = [NSMutableArray array];
+    // 类簇：NSString、NSArray、NSDictionary，真实类型是其他类型
+    NSLog(@"%@", [array class]);
+    [array addObject:@"jack"];
+    [array addObject:obj];
+    NSLog(@"%@", array);
+    
+    NSMutableDictionary *mDict = [NSMutableDictionary dictionary];
+    NSLog(@"%@", [mDict class]);
+    mDict[@"name"] = @"jack";
+    mDict[@"age"] = nil;
+    mDict[obj] = @"age";
+    NSLog(@"%@", mDict);
+}
+
+- (void)btnClick1 {
+    NSLog(@"click1");
+}
+
+- (void)btnClick2 {
+    NSLog(@"click2");
+}
+
+- (void)btnClick3 {
+    NSLog(@"click3");
 }
 
 int age_ = 100;
