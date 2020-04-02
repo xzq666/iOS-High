@@ -20,6 +20,8 @@
 		F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */; };
 		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
 		F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */; };
+		F0CB3EE4243585B60009EB1C /* XZQThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CB3EE3243585B60009EB1C /* XZQThread.m */; };
+		F0CB3EE72435B9230009EB1C /* RunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CB3EE62435B9230009EB1C /* RunloopVC.m */; };
 		F0D25DE92434249200CADE66 /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D25DE82434249200CADE66 /* UIControl+Extension.m */; };
 		F0D25DEC243428B000CADE66 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D25DEB243428B000CADE66 /* NSMutableArray+Extension.m */; };
 		F0D25DEF24342D3A00CADE66 /* NSMutableDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D25DEE24342D3A00CADE66 /* NSMutableDictionary+Extension.m */; };
@@ -69,6 +71,10 @@
 		F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_Runtime.m; sourceTree = "<group>"; };
 		F0C60D0C24299B370044451C /* XZQStudent_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQStudent_Runtime.h; sourceTree = "<group>"; };
 		F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQStudent_Runtime.m; sourceTree = "<group>"; };
+		F0CB3EE2243585B60009EB1C /* XZQThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQThread.h; sourceTree = "<group>"; };
+		F0CB3EE3243585B60009EB1C /* XZQThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQThread.m; sourceTree = "<group>"; };
+		F0CB3EE52435B9230009EB1C /* RunloopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopVC.h; sourceTree = "<group>"; };
+		F0CB3EE62435B9230009EB1C /* RunloopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopVC.m; sourceTree = "<group>"; };
 		F0D25DE72434249200CADE66 /* UIControl+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Extension.h"; sourceTree = "<group>"; };
 		F0D25DE82434249200CADE66 /* UIControl+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Extension.m"; sourceTree = "<group>"; };
 		F0D25DEA243428B000CADE66 /* NSMutableArray+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extension.h"; sourceTree = "<group>"; };
@@ -238,6 +244,10 @@
 			isa = PBXGroup;
 			children = (
 				F0D25DF124342F0E00CADE66 /* Runloop.md */,
+				F0CB3EE2243585B60009EB1C /* XZQThread.h */,
+				F0CB3EE3243585B60009EB1C /* XZQThread.m */,
+				F0CB3EE52435B9230009EB1C /* RunloopVC.h */,
+				F0CB3EE62435B9230009EB1C /* RunloopVC.m */,
 			);
 			path = Runloop;
 			sourceTree = "<group>";
@@ -358,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0D44EDA242C424600ADE4B4 /* XZQFather_Runtime.m in Sources */,
+				F0CB3EE4243585B60009EB1C /* XZQThread.m in Sources */,
 				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
@@ -367,6 +378,7 @@
 				F0D25DEC243428B000CADE66 /* NSMutableArray+Extension.m in Sources */,
 				F0D25DEF24342D3A00CADE66 /* NSMutableDictionary+Extension.m in Sources */,
 				F03DD0182410FE470097D400 /* ViewController.mm in Sources */,
+				F0CB3EE72435B9230009EB1C /* RunloopVC.m in Sources */,
 				F0D44EE0242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m in Sources */,
 				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
 				F0D25DE92434249200CADE66 /* UIControl+Extension.m in Sources */,

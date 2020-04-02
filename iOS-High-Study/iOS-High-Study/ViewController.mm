@@ -27,6 +27,8 @@
 #import "XZQSonOfSon_Runtime.h"
 #import "XZQSon_super.h"
 
+#import "RunloopVC.h"
+
 @interface Student : NSObject
 {
     @public
@@ -165,11 +167,36 @@ void observeRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity a
     // 释放
     CFRelease(observer);
     
+    /* 解决NSTimer在滑动时停止工作的问题
     UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(20, 100, 300, 50)];
     textView.backgroundColor = [UIColor systemGrayColor];
     textView.font = [UIFont systemFontOfSize:16.0f];
     textView.text = @"dhaksjdgsufgsdihsdfshdfgsldlafjkadsgalfjsdkfgasldkjfgsdakjfgdslfjasdlgfdskjfasdfsdagdsfsfdsafasdfasdfsdfasdf";
     [self.view addSubview:textView];
+    
+    static int count = 0;
+    // 定时器在默认mode下工作，滑动时切换到UITrackingRunLoopMode的mode后就会停止工作
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"%d", ++count);
+//    }];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"%d", ++count);
+    }];
+    // NSDefaultRunLoopMode、UITrackingRunLoopMode才是真正存在的模式
+    // NSRunLoopCommonModes并不是一个模式，它只是一个标记
+    // 表示timers能在_commonModes数组中存放的模式下工作
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes]; */
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(20, 200, 100, 40);
+    [btn setTitle:@"跳转" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(gotoVC) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)gotoVC {
+    RunloopVC *vc = [[RunloopVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 void run(id self, SEL _cmd)
@@ -599,12 +626,16 @@ typedef void (^XZQBlock)(void);
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     // self.person1->isa：NSKVONotifying_XZQPerson（Runtime动态创建的类，是XZQPerson的子类）
     // self.person2->isa：XZQPerson
-    
+    NSLog(@"1");
     self.person1.age = 21;
     self.person1.height = 30;
     
     self.person2.age = 22;
     self.person2.height = 30;
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"111");
 }
 
 // 当监听对象的属性值发生改变时就会调用

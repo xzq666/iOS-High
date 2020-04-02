@@ -22,7 +22,7 @@
 }
 
 - (void)xzq_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
-    NSLog(@"%@ - %@ - %@", self, target, NSStringFromSelector(action));
+//    NSLog(@"%@ - %@ - %@", self, target, NSStringFromSelector(action));
 //    [target performSelector:action];
     // 因为方法已经交换，因此调用原来的sendAction需要使用xzq_sendAction
     [self xzq_sendAction:action to:target forEvent:event];
