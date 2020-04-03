@@ -72,6 +72,7 @@
 		F0C3B9BE2436E04100AD6DC6 /* XZQPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPermenantThread.m; sourceTree = "<group>"; };
 		F0C3B9C02436E0E100AD6DC6 /* PermenantThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermenantThreadVC.h; sourceTree = "<group>"; };
 		F0C3B9C12436E0E100AD6DC6 /* PermenantThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermenantThreadVC.m; sourceTree = "<group>"; };
+		F0C3B9C42437038300AD6DC6 /* 多线程.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "多线程.md"; sourceTree = "<group>"; };
 		F0C60D08242996F10044451C /* Runtime.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Runtime.md; sourceTree = "<group>"; };
 		F0C60D09242998D10044451C /* XZQPerson_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPerson_Runtime.h; sourceTree = "<group>"; };
 		F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_Runtime.m; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 				F0F5BA1E2421C91B00EEA7F9 /* block */,
 				F0C60D07242996DE0044451C /* Runtime */,
 				F0D25DF024342E7D00CADE66 /* Runloop */,
+				F0C3B9C32437036F00AD6DC6 /* 多线程 */,
 				F03DD0102410FE470097D400 /* AppDelegate.h */,
 				F03DD0112410FE470097D400 /* AppDelegate.m */,
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
@@ -214,6 +216,14 @@
 				F0C3B9BE2436E04100AD6DC6 /* XZQPermenantThread.m */,
 			);
 			path = "线程保活";
+			sourceTree = "<group>";
+		};
+		F0C3B9C32437036F00AD6DC6 /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				F0C3B9C42437038300AD6DC6 /* 多线程.md */,
+			);
+			path = "多线程";
 			sourceTree = "<group>";
 		};
 		F0C60D07242996DE0044451C /* Runtime */ = {
