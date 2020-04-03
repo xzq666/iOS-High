@@ -28,6 +28,7 @@
 #import "XZQSon_super.h"
 
 #import "RunloopVC.h"
+#import "PermenantThreadVC.h"
 
 @interface Student : NSObject
 {
@@ -195,7 +196,7 @@ void observeRunLoopActivities(CFRunLoopObserverRef observer, CFRunLoopActivity a
 }
 
 - (void)gotoVC {
-    RunloopVC *vc = [[RunloopVC alloc] init];
+    PermenantThreadVC *vc = [[PermenantThreadVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

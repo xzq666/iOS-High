@@ -91,7 +91,11 @@ Core Foundation中关于RunLoop的5个类：<br/>
 
 
 问：讲讲runloop，项目中有用到吗？
-答：
+答：运行循环。在程序运行过程中循环做一些事情。
+1、控制线程生命周期（线程保活，例如AFNetworking）；<br/>
+2、解决NSTimer在滑动时停止工作的问题；<br/>
+3、监控应用卡顿；<br/>
+4、性能优化；<br/>
 
 
 问：runloop内部实现逻辑？
