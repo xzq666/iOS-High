@@ -22,6 +22,9 @@
 		F0C3B9C22436E0E100AD6DC6 /* PermenantThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3B9C12436E0E100AD6DC6 /* PermenantThreadVC.m */; };
 		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
 		F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */; };
+		F0C8D6B1243C1AD5008BFD45 /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8D6B0243C1AD5008BFD45 /* ThreadVC.m */; };
+		F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8D6B3243C2502008BFD45 /* XZQBaseLock.m */; };
+		F0C8D6B7243C25F0008BFD45 /* XZQOSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C8D6B6243C25F0008BFD45 /* XZQOSSpinLockDemo.m */; };
 		F0CB3EE4243585B60009EB1C /* XZQThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CB3EE3243585B60009EB1C /* XZQThread.m */; };
 		F0CB3EE72435B9230009EB1C /* RunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CB3EE62435B9230009EB1C /* RunloopVC.m */; };
 		F0D25DE92434249200CADE66 /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D25DE82434249200CADE66 /* UIControl+Extension.m */; };
@@ -78,6 +81,12 @@
 		F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPerson_Runtime.m; sourceTree = "<group>"; };
 		F0C60D0C24299B370044451C /* XZQStudent_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQStudent_Runtime.h; sourceTree = "<group>"; };
 		F0C60D0D24299B370044451C /* XZQStudent_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQStudent_Runtime.m; sourceTree = "<group>"; };
+		F0C8D6AF243C1AD5008BFD45 /* ThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVC.h; sourceTree = "<group>"; };
+		F0C8D6B0243C1AD5008BFD45 /* ThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadVC.m; sourceTree = "<group>"; };
+		F0C8D6B2243C2502008BFD45 /* XZQBaseLock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQBaseLock.h; sourceTree = "<group>"; };
+		F0C8D6B3243C2502008BFD45 /* XZQBaseLock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQBaseLock.m; sourceTree = "<group>"; };
+		F0C8D6B5243C25F0008BFD45 /* XZQOSSpinLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQOSSpinLockDemo.h; sourceTree = "<group>"; };
+		F0C8D6B6243C25F0008BFD45 /* XZQOSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQOSSpinLockDemo.m; sourceTree = "<group>"; };
 		F0CB3EE2243585B60009EB1C /* XZQThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQThread.h; sourceTree = "<group>"; };
 		F0CB3EE3243585B60009EB1C /* XZQThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQThread.m; sourceTree = "<group>"; };
 		F0CB3EE52435B9230009EB1C /* RunloopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopVC.h; sourceTree = "<group>"; };
@@ -222,6 +231,12 @@
 			isa = PBXGroup;
 			children = (
 				F0C3B9C42437038300AD6DC6 /* 多线程.md */,
+				F0C8D6AF243C1AD5008BFD45 /* ThreadVC.h */,
+				F0C8D6B0243C1AD5008BFD45 /* ThreadVC.m */,
+				F0C8D6B2243C2502008BFD45 /* XZQBaseLock.h */,
+				F0C8D6B3243C2502008BFD45 /* XZQBaseLock.m */,
+				F0C8D6B5243C25F0008BFD45 /* XZQOSSpinLockDemo.h */,
+				F0C8D6B6243C25F0008BFD45 /* XZQOSSpinLockDemo.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -403,6 +418,7 @@
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
 				F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */,
 				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
+				F0C8D6B1243C1AD5008BFD45 /* ThreadVC.m in Sources */,
 				F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */,
 				F0D25DEC243428B000CADE66 /* NSMutableArray+Extension.m in Sources */,
 				F0D25DEF24342D3A00CADE66 /* NSMutableDictionary+Extension.m in Sources */,
@@ -420,6 +436,8 @@
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
 				F0D44EDD242C425900ADE4B4 /* XZQSon_Runtime.m in Sources */,
+				F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */,
+				F0C8D6B7243C25F0008BFD45 /* XZQOSSpinLockDemo.m in Sources */,
 				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,

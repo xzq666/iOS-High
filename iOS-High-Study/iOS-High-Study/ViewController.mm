@@ -30,6 +30,8 @@
 #import "RunloopVC.h"
 #import "PermenantThreadVC.h"
 
+#import "ThreadVC.h"
+
 @interface Student : NSObject
 {
     @public
@@ -154,6 +156,76 @@
     dispatch_queue_t queue5 = dispatch_queue_create("queue2", DISPATCH_QUEUE_CONCURRENT);
     // 即使dispatch_queue_create创建的名称一样也会是两个不同的对列
     NSLog(@"%p %p %p %p %p", queue1, queue2, queue3, queue4, queue5);
+    
+    NSLog(@"----------");
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(20, 200, 100, 40);
+    [btn setTitle:@"测试" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(testClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)testClick {
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//
+//    dispatch_async(queue, ^{
+//        NSLog(@"1");
+//        // 有afterDelay的实质上是一个定时器，是把任务添加到RunLoop上的
+//        // 本质上就是往RunLoopt中添加到定时器，而子线程默认是不开启RunLoop的
+//        [self performSelector:@selector(test_thread) withObject:nil afterDelay:.0];
+//        NSLog(@"3");
+//
+//        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+//    });
+    
+//    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+//        NSLog(@"1");
+//
+//        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+//        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+//    }];
+//    [thread start];
+//
+//    [self performSelector:@selector(test_thread) onThread:thread withObject:nil waitUntilDone:YES];
+    
+    /*
+    // 创建对列组
+    dispatch_group_t group = dispatch_group_create();
+    // 创建并发对列
+    dispatch_queue_t queue = dispatch_queue_create("myQueue", DISPATCH_QUEUE_CONCURRENT);
+    // 添加异步任务
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"任务1 - %@", [NSThread currentThread]);
+        }
+    });
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"任务2 - %@", [NSThread currentThread]);
+        }
+    });
+    // 等前面的任务执行完毕后，会自动执行这个任务
+//    dispatch_group_notify(group, queue, ^{
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            for (int i = 0; i < 3; i++) {
+//                NSLog(@"任务3 - %@", [NSThread currentThread]);
+//            }
+//        });
+//    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        for (int i = 0; i < 3; i++) {
+            NSLog(@"任务3 - %@", [NSThread currentThread]);
+        }
+    });
+     */
+    
+    ThreadVC *vc = [[ThreadVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)test_thread {
+    NSLog(@"2");
 }
 
 // 使用sync函数往当前串行对列中添加任务，会卡住当前的串行对列（产生死锁）
