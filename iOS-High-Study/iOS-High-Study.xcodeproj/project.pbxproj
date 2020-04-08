@@ -18,6 +18,12 @@
 		F03DD0232410FE4D0097D400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0222410FE4D0097D400 /* main.m */; };
 		F06A7B8A242F2CFD003BFA0D /* XZQPerson_super.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A7B89242F2CFD003BFA0D /* XZQPerson_super.m */; };
 		F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */ = {isa = PBXBuildFile; fileRef = F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */; };
+		F0C2464A243D5D150094B891 /* XZQOSUnfairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24649243D5D150094B891 /* XZQOSUnfairLockDemo.m */; };
+		F0C2464D243D5FDE0094B891 /* XZQMutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C2464C243D5FDE0094B891 /* XZQMutexDemo.m */; };
+		F0C24650243D661A0094B891 /* XZQMutexDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C2464F243D661A0094B891 /* XZQMutexDemo2.m */; };
+		F0C24653243D6AD30094B891 /* XZQMutexDemo3.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24652243D6AD30094B891 /* XZQMutexDemo3.m */; };
+		F0C24656243D70760094B891 /* XZQNSLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24655243D70760094B891 /* XZQNSLockDemo.m */; };
+		F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24658243D73180094B891 /* XZQNSConditionDemo.m */; };
 		F0C3B9BF2436E04100AD6DC6 /* XZQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3B9BE2436E04100AD6DC6 /* XZQPermenantThread.m */; };
 		F0C3B9C22436E0E100AD6DC6 /* PermenantThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3B9C12436E0E100AD6DC6 /* PermenantThreadVC.m */; };
 		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
@@ -71,6 +77,18 @@
 		F06A7B8B242F2D0D003BFA0D /* XZQSon_super.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSon_super.h; sourceTree = "<group>"; };
 		F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSon_super.m; sourceTree = "<group>"; };
 		F06A7B8E242F364A003BFA0D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F0C24648243D5D150094B891 /* XZQOSUnfairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQOSUnfairLockDemo.h; sourceTree = "<group>"; };
+		F0C24649243D5D150094B891 /* XZQOSUnfairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQOSUnfairLockDemo.m; sourceTree = "<group>"; };
+		F0C2464B243D5FDE0094B891 /* XZQMutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMutexDemo.h; sourceTree = "<group>"; };
+		F0C2464C243D5FDE0094B891 /* XZQMutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMutexDemo.m; sourceTree = "<group>"; };
+		F0C2464E243D661A0094B891 /* XZQMutexDemo2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMutexDemo2.h; sourceTree = "<group>"; };
+		F0C2464F243D661A0094B891 /* XZQMutexDemo2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMutexDemo2.m; sourceTree = "<group>"; };
+		F0C24651243D6AD30094B891 /* XZQMutexDemo3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMutexDemo3.h; sourceTree = "<group>"; };
+		F0C24652243D6AD30094B891 /* XZQMutexDemo3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMutexDemo3.m; sourceTree = "<group>"; };
+		F0C24654243D70760094B891 /* XZQNSLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQNSLockDemo.h; sourceTree = "<group>"; };
+		F0C24655243D70760094B891 /* XZQNSLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNSLockDemo.m; sourceTree = "<group>"; };
+		F0C24657243D73180094B891 /* XZQNSConditionDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQNSConditionDemo.h; sourceTree = "<group>"; };
+		F0C24658243D73180094B891 /* XZQNSConditionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNSConditionDemo.m; sourceTree = "<group>"; };
 		F0C3B9BD2436E04100AD6DC6 /* XZQPermenantThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPermenantThread.h; sourceTree = "<group>"; };
 		F0C3B9BE2436E04100AD6DC6 /* XZQPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPermenantThread.m; sourceTree = "<group>"; };
 		F0C3B9C02436E0E100AD6DC6 /* PermenantThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermenantThreadVC.h; sourceTree = "<group>"; };
@@ -237,6 +255,18 @@
 				F0C8D6B3243C2502008BFD45 /* XZQBaseLock.m */,
 				F0C8D6B5243C25F0008BFD45 /* XZQOSSpinLockDemo.h */,
 				F0C8D6B6243C25F0008BFD45 /* XZQOSSpinLockDemo.m */,
+				F0C24648243D5D150094B891 /* XZQOSUnfairLockDemo.h */,
+				F0C24649243D5D150094B891 /* XZQOSUnfairLockDemo.m */,
+				F0C2464B243D5FDE0094B891 /* XZQMutexDemo.h */,
+				F0C2464C243D5FDE0094B891 /* XZQMutexDemo.m */,
+				F0C2464E243D661A0094B891 /* XZQMutexDemo2.h */,
+				F0C2464F243D661A0094B891 /* XZQMutexDemo2.m */,
+				F0C24651243D6AD30094B891 /* XZQMutexDemo3.h */,
+				F0C24652243D6AD30094B891 /* XZQMutexDemo3.m */,
+				F0C24654243D70760094B891 /* XZQNSLockDemo.h */,
+				F0C24655243D70760094B891 /* XZQNSLockDemo.m */,
+				F0C24657243D73180094B891 /* XZQNSConditionDemo.h */,
+				F0C24658243D73180094B891 /* XZQNSConditionDemo.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -415,6 +445,7 @@
 				F0C3B9C22436E0E100AD6DC6 /* PermenantThreadVC.m in Sources */,
 				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
+				F0C2464A243D5D150094B891 /* XZQOSUnfairLockDemo.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
 				F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */,
 				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
@@ -433,12 +464,17 @@
 				F0DE558624206058007BF97D /* XZQStudent_Category.m in Sources */,
 				F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */,
 				F0C3B9BF2436E04100AD6DC6 /* XZQPermenantThread.m in Sources */,
+				F0C24656243D70760094B891 /* XZQNSLockDemo.m in Sources */,
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
+				F0C2464D243D5FDE0094B891 /* XZQMutexDemo.m in Sources */,
 				F0D44EDD242C425900ADE4B4 /* XZQSon_Runtime.m in Sources */,
+				F0C24650243D661A0094B891 /* XZQMutexDemo2.m in Sources */,
 				F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */,
+				F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */,
 				F0C8D6B7243C25F0008BFD45 /* XZQOSSpinLockDemo.m in Sources */,
 				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
+				F0C24653243D6AD30094B891 /* XZQMutexDemo3.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
 				F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */,

@@ -8,6 +8,12 @@
 
 #import "ThreadVC.h"
 #import "XZQOSSpinLockDemo.h"
+#import "XZQOSUnfairLockDemo.h"
+#import "XZQMutexDemo.h"
+#import "XZQMutexDemo2.h"
+#import "XZQMutexDemo3.h"
+#import "XZQNSLockDemo.h"
+#import "XZQNSConditionDemo.h"
 
 @interface ThreadVC ()
 
@@ -19,9 +25,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    XZQOSSpinLockDemo *osSpinLock = [[XZQOSSpinLockDemo alloc] init];
-    [osSpinLock ticketTest];
-    [osSpinLock moneyTest];
+//    XZQOSSpinLockDemo *osSpinLock = [[XZQOSSpinLockDemo alloc] init];
+//    [osSpinLock ticketTest];
+//    [osSpinLock moneyTest];
+    
+//    XZQOSUnfairLockDemo *osUnfairLock = [[XZQOSUnfairLockDemo alloc] init];
+//    [osUnfairLock ticketTest];
+//    [osUnfairLock moneyTest];
+    
+//    XZQMutexDemo *mutex = [[XZQMutexDemo alloc] init];
+//    [mutex ticketTest];
+//    [mutex moneyTest];
+    
+//    XZQMutexDemo2 *mutex = [[XZQMutexDemo2 alloc] init];
+//    [mutex otherTest];
+    
+//    XZQMutexDemo3 *mutex = [[XZQMutexDemo3 alloc] init];
+//    [mutex otherTest];
+    
+//    XZQNSLockDemo *nslock = [[XZQNSLockDemo alloc] init];
+//    [nslock ticketTest];
+//    [nslock moneyTest];
+    
+    XZQNSConditionDemo *condition = [[XZQNSConditionDemo alloc] init];
+    [condition otherTest];
 }
 
 @end

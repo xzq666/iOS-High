@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)__saleTicket;
 
+- (void)otherTest;
+
 @end
 
 NS_ASSUME_NONNULL_END
