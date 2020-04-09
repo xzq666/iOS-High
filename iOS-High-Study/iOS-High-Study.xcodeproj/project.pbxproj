@@ -51,6 +51,10 @@
 		F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558824206072007BF97D /* XZQStudent_Category+Test1.m */; };
 		F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558B2420607A007BF97D /* XZQStudent_Category+Test2.m */; };
 		F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */; };
+		F0E6ED59243EEBF800EB9F98 /* XZQNSConditionLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E6ED58243EEBF800EB9F98 /* XZQNSConditionLockDemo.m */; };
+		F0E6ED5C243EEEAA00EB9F98 /* XZQSeriesQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E6ED5B243EEEAA00EB9F98 /* XZQSeriesQueueDemo.m */; };
+		F0E6ED5F243EF18100EB9F98 /* XZQSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E6ED5E243EF18100EB9F98 /* XZQSemaphoreDemo.m */; };
+		F0E6ED62243EF58000EB9F98 /* XZQSynchronizedDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E6ED61243EF58000EB9F98 /* XZQSynchronizedDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +152,14 @@
 		F0DE558B2420607A007BF97D /* XZQStudent_Category+Test2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XZQStudent_Category+Test2.m"; sourceTree = "<group>"; };
 		F0DE558D24207BC0007BF97D /* XZQTeacher_Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Category.h; sourceTree = "<group>"; };
 		F0DE558E24207BC0007BF97D /* XZQTeacher_Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Category.m; sourceTree = "<group>"; };
+		F0E6ED57243EEBF800EB9F98 /* XZQNSConditionLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQNSConditionLockDemo.h; sourceTree = "<group>"; };
+		F0E6ED58243EEBF800EB9F98 /* XZQNSConditionLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNSConditionLockDemo.m; sourceTree = "<group>"; };
+		F0E6ED5A243EEEAA00EB9F98 /* XZQSeriesQueueDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSeriesQueueDemo.h; sourceTree = "<group>"; };
+		F0E6ED5B243EEEAA00EB9F98 /* XZQSeriesQueueDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSeriesQueueDemo.m; sourceTree = "<group>"; };
+		F0E6ED5D243EF18100EB9F98 /* XZQSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSemaphoreDemo.h; sourceTree = "<group>"; };
+		F0E6ED5E243EF18100EB9F98 /* XZQSemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSemaphoreDemo.m; sourceTree = "<group>"; };
+		F0E6ED60243EF58000EB9F98 /* XZQSynchronizedDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQSynchronizedDemo.h; sourceTree = "<group>"; };
+		F0E6ED61243EF58000EB9F98 /* XZQSynchronizedDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQSynchronizedDemo.m; sourceTree = "<group>"; };
 		F0F5BA1F2421C93300EEA7F9 /* block.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = block.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +279,14 @@
 				F0C24655243D70760094B891 /* XZQNSLockDemo.m */,
 				F0C24657243D73180094B891 /* XZQNSConditionDemo.h */,
 				F0C24658243D73180094B891 /* XZQNSConditionDemo.m */,
+				F0E6ED57243EEBF800EB9F98 /* XZQNSConditionLockDemo.h */,
+				F0E6ED58243EEBF800EB9F98 /* XZQNSConditionLockDemo.m */,
+				F0E6ED5A243EEEAA00EB9F98 /* XZQSeriesQueueDemo.h */,
+				F0E6ED5B243EEEAA00EB9F98 /* XZQSeriesQueueDemo.m */,
+				F0E6ED5D243EF18100EB9F98 /* XZQSemaphoreDemo.h */,
+				F0E6ED5E243EF18100EB9F98 /* XZQSemaphoreDemo.m */,
+				F0E6ED60243EF58000EB9F98 /* XZQSynchronizedDemo.h */,
+				F0E6ED61243EF58000EB9F98 /* XZQSynchronizedDemo.m */,
 			);
 			path = "多线程";
 			sourceTree = "<group>";
@@ -440,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E6ED5F243EF18100EB9F98 /* XZQSemaphoreDemo.m in Sources */,
 				F0D44EDA242C424600ADE4B4 /* XZQFather_Runtime.m in Sources */,
 				F0CB3EE4243585B60009EB1C /* XZQThread.m in Sources */,
 				F0C3B9C22436E0E100AD6DC6 /* PermenantThreadVC.m in Sources */,
@@ -447,6 +468,7 @@
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0C2464A243D5D150094B891 /* XZQOSUnfairLockDemo.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
+				F0E6ED62243EF58000EB9F98 /* XZQSynchronizedDemo.m in Sources */,
 				F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */,
 				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
 				F0C8D6B1243C1AD5008BFD45 /* ThreadVC.m in Sources */,
@@ -454,6 +476,7 @@
 				F0D25DEC243428B000CADE66 /* NSMutableArray+Extension.m in Sources */,
 				F0D25DEF24342D3A00CADE66 /* NSMutableDictionary+Extension.m in Sources */,
 				F03DD0182410FE470097D400 /* ViewController.mm in Sources */,
+				F0E6ED59243EEBF800EB9F98 /* XZQNSConditionLockDemo.m in Sources */,
 				F0CB3EE72435B9230009EB1C /* RunloopVC.m in Sources */,
 				F0D44EE0242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m in Sources */,
 				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
@@ -478,6 +501,7 @@
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
 				F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */,
+				F0E6ED5C243EEEAA00EB9F98 /* XZQSeriesQueueDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

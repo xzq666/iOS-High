@@ -14,6 +14,10 @@
 #import "XZQMutexDemo3.h"
 #import "XZQNSLockDemo.h"
 #import "XZQNSConditionDemo.h"
+#import "XZQNSConditionLockDemo.h"
+#import "XZQSeriesQueueDemo.h"
+#import "XZQSemaphoreDemo.h"
+#import "XZQSynchronizedDemo.h"
 
 @interface ThreadVC ()
 
@@ -47,8 +51,24 @@
 //    [nslock ticketTest];
 //    [nslock moneyTest];
     
-    XZQNSConditionDemo *condition = [[XZQNSConditionDemo alloc] init];
-    [condition otherTest];
+//    XZQNSConditionDemo *condition = [[XZQNSConditionDemo alloc] init];
+//    [condition otherTest];
+    
+//    XZQNSConditionLockDemo *conditionLock = [[XZQNSConditionLockDemo alloc] init];
+//    [conditionLock otherTest];
+    
+//    XZQSeriesQueueDemo *seriesQueue = [[XZQSeriesQueueDemo alloc] init];
+//    [seriesQueue ticketTest];
+//    [seriesQueue moneyTest];
+    
+//    XZQSemaphoreDemo *semaphore = [[XZQSemaphoreDemo alloc] init];
+////    [semaphore otherTest];
+//    [semaphore ticketTest];
+//    [semaphore moneyTest];
+    
+    XZQSynchronizedDemo *synchronized = [[XZQSynchronizedDemo alloc] init];
+    [synchronized ticketTest];
+    [synchronized moneyTest];
 }
 
 @end
