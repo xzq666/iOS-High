@@ -32,6 +32,8 @@
 
 #import "ThreadVC.h"
 
+#import "MemoryManagerVC.h"
+
 @interface Student : NSObject
 {
     @public
@@ -89,7 +91,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self moreThread];
+    [self memoryManager];
     
     /*
      1.print为什么能够调用
@@ -103,6 +105,19 @@
 //    id cls = [XZQPerson_super class];
 //    void *obj = &cls;
 //    [(__bridge id)obj print];
+}
+
+- (void)memoryManager {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(20, 200, 100, 40);
+    [btn setTitle:@"测试" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(memoryClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)memoryClick {
+    MemoryManagerVC *vc = [[MemoryManagerVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)moreThread {

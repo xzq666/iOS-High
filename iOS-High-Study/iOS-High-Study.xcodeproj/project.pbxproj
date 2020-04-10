@@ -24,6 +24,9 @@
 		F0C24653243D6AD30094B891 /* XZQMutexDemo3.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24652243D6AD30094B891 /* XZQMutexDemo3.m */; };
 		F0C24656243D70760094B891 /* XZQNSLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24655243D70760094B891 /* XZQNSLockDemo.m */; };
 		F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C24658243D73180094B891 /* XZQNSConditionDemo.m */; };
+		F0C3894D2440108A0087F230 /* MemoryManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3894C2440108A0087F230 /* MemoryManagerVC.m */; };
+		F0C38950244016B70087F230 /* XZQProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3894F244016B70087F230 /* XZQProxy.m */; };
+		F0C3895324401B850087F230 /* XZQProxyExtendsNSProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3895224401B850087F230 /* XZQProxyExtendsNSProxy.m */; };
 		F0C3B9BF2436E04100AD6DC6 /* XZQPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3B9BE2436E04100AD6DC6 /* XZQPermenantThread.m */; };
 		F0C3B9C22436E0E100AD6DC6 /* PermenantThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C3B9C12436E0E100AD6DC6 /* PermenantThreadVC.m */; };
 		F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60D0A242998D10044451C /* XZQPerson_Runtime.m */; };
@@ -93,6 +96,13 @@
 		F0C24655243D70760094B891 /* XZQNSLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNSLockDemo.m; sourceTree = "<group>"; };
 		F0C24657243D73180094B891 /* XZQNSConditionDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQNSConditionDemo.h; sourceTree = "<group>"; };
 		F0C24658243D73180094B891 /* XZQNSConditionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNSConditionDemo.m; sourceTree = "<group>"; };
+		F0C3894A24400E370087F230 /* 内存管理.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "内存管理.md"; sourceTree = "<group>"; };
+		F0C3894B2440108A0087F230 /* MemoryManagerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManagerVC.h; sourceTree = "<group>"; };
+		F0C3894C2440108A0087F230 /* MemoryManagerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManagerVC.m; sourceTree = "<group>"; };
+		F0C3894E244016B70087F230 /* XZQProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQProxy.h; sourceTree = "<group>"; };
+		F0C3894F244016B70087F230 /* XZQProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQProxy.m; sourceTree = "<group>"; };
+		F0C3895124401B850087F230 /* XZQProxyExtendsNSProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQProxyExtendsNSProxy.h; sourceTree = "<group>"; };
+		F0C3895224401B850087F230 /* XZQProxyExtendsNSProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQProxyExtendsNSProxy.m; sourceTree = "<group>"; };
 		F0C3B9BD2436E04100AD6DC6 /* XZQPermenantThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPermenantThread.h; sourceTree = "<group>"; };
 		F0C3B9BE2436E04100AD6DC6 /* XZQPermenantThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPermenantThread.m; sourceTree = "<group>"; };
 		F0C3B9C02436E0E100AD6DC6 /* PermenantThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermenantThreadVC.h; sourceTree = "<group>"; };
@@ -252,6 +262,13 @@
 		F0C3894924400D5F0087F230 /* 内存管理 */ = {
 			isa = PBXGroup;
 			children = (
+				F0C3894A24400E370087F230 /* 内存管理.md */,
+				F0C3894B2440108A0087F230 /* MemoryManagerVC.h */,
+				F0C3894C2440108A0087F230 /* MemoryManagerVC.m */,
+				F0C3894E244016B70087F230 /* XZQProxy.h */,
+				F0C3894F244016B70087F230 /* XZQProxy.m */,
+				F0C3895124401B850087F230 /* XZQProxyExtendsNSProxy.h */,
+				F0C3895224401B850087F230 /* XZQProxyExtendsNSProxy.m */,
 			);
 			path = "内存管理";
 			sourceTree = "<group>";
@@ -482,6 +499,7 @@
 				F0C8D6B1243C1AD5008BFD45 /* ThreadVC.m in Sources */,
 				F0C60D0B242998D10044451C /* XZQPerson_Runtime.m in Sources */,
 				F0D25DEC243428B000CADE66 /* NSMutableArray+Extension.m in Sources */,
+				F0C38950244016B70087F230 /* XZQProxy.m in Sources */,
 				F0D25DEF24342D3A00CADE66 /* NSMutableDictionary+Extension.m in Sources */,
 				F03DD0182410FE470097D400 /* ViewController.mm in Sources */,
 				F0E6ED59243EEBF800EB9F98 /* XZQNSConditionLockDemo.m in Sources */,
@@ -494,12 +512,14 @@
 				F03DD0122410FE470097D400 /* AppDelegate.m in Sources */,
 				F0DE558624206058007BF97D /* XZQStudent_Category.m in Sources */,
 				F0D51CE824245DE00007EA21 /* XZQPerson_block.m in Sources */,
+				F0C3894D2440108A0087F230 /* MemoryManagerVC.m in Sources */,
 				F0C3B9BF2436E04100AD6DC6 /* XZQPermenantThread.m in Sources */,
 				F0C24656243D70760094B891 /* XZQNSLockDemo.m in Sources */,
 				F0D3E498241C6FC8001019DC /* XZQPerson.m in Sources */,
 				F0D5B8AE241F221A006284AF /* XZQPerson_Category.m in Sources */,
 				F0C2464D243D5FDE0094B891 /* XZQMutexDemo.m in Sources */,
 				F0D44EDD242C425900ADE4B4 /* XZQSon_Runtime.m in Sources */,
+				F0C3895324401B850087F230 /* XZQProxyExtendsNSProxy.m in Sources */,
 				F0C24650243D661A0094B891 /* XZQMutexDemo2.m in Sources */,
 				F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */,
 				F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */,
