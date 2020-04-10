@@ -211,6 +211,7 @@
 				F0C60D07242996DE0044451C /* Runtime */,
 				F0D25DF024342E7D00CADE66 /* Runloop */,
 				F0C3B9C32437036F00AD6DC6 /* 多线程 */,
+				F0C3894924400D5F0087F230 /* 内存管理 */,
 				F03DD0102410FE470097D400 /* AppDelegate.h */,
 				F03DD0112410FE470097D400 /* AppDelegate.m */,
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
@@ -246,6 +247,13 @@
 				F06A7B8C242F2D0D003BFA0D /* XZQSon_super.m */,
 			);
 			path = super;
+			sourceTree = "<group>";
+		};
+		F0C3894924400D5F0087F230 /* 内存管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "内存管理";
 			sourceTree = "<group>";
 		};
 		F0C3B9BC2436DFA100AD6DC6 /* 线程保活 */ = {

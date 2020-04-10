@@ -19,7 +19,13 @@
 #import "XZQSemaphoreDemo.h"
 #import "XZQSynchronizedDemo.h"
 
+#import <pthread.h>
+
 @interface ThreadVC ()
+
+@property(nonatomic,assign) pthread_rwlock_t rwlock;
+
+@property(nonatomic,strong) dispatch_queue_t queue;
 
 @end
 
@@ -66,9 +72,79 @@
 //    [semaphore ticketTest];
 //    [semaphore moneyTest];
     
-    XZQSynchronizedDemo *synchronized = [[XZQSynchronizedDemo alloc] init];
-    [synchronized ticketTest];
-    [synchronized moneyTest];
+//    XZQSynchronizedDemo *synchronized = [[XZQSynchronizedDemo alloc] init];
+//    [synchronized ticketTest];
+//    [synchronized moneyTest];
+    
+    /* 读写锁
+    pthread_rwlock_init(&_rwlock, NULL);
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(queue, ^{
+            [self read];
+        });
+        
+        dispatch_async(queue, ^{
+            [self write];
+        });
+    }
+     */
+    
+    /*
+     dispatch_barrier_async
+     */
+    self.queue = dispatch_queue_create("rwQueue", DISPATCH_QUEUE_CONCURRENT);
+    for (int i = 0; i < 5; i++) {
+        [self read2];
+        [self read2];
+        [self write2];
+        [self write2];
+    }
+    
+}
+
+/*
+ 使用信号量dispatch_semaphore会使无论是读还是写同一时间都只能有一条线程，但实际应用中我们应该同时允许多条线程读或多条线程写，只需确保同一时间没有读和写一起执行即可。
+ 一般我们会要求多读单写
+ */
+
+- (void)read {
+    pthread_rwlock_rdlock(&_rwlock);
+    
+    sleep(1);
+    NSLog(@"%s - %@", __func__, [NSThread currentThread]);
+    
+    pthread_rwlock_unlock(&_rwlock);
+}
+
+- (void)write {
+    pthread_rwlock_wrlock(&_rwlock);
+    
+    sleep(1);
+    NSLog(@"%s - %@", __func__, [NSThread currentThread]);
+    
+    pthread_rwlock_unlock(&_rwlock);
+}
+
+- (void)read2 {
+    dispatch_async(self.queue, ^{
+        sleep(1);
+        NSLog(@"read");
+    });
+}
+
+- (void)write2 {
+    dispatch_barrier_sync(self.queue, ^{
+        sleep(1);
+        NSLog(@"write");
+    });
+}
+
+- (void)dealloc
+{
+    pthread_rwlock_destroy(&_rwlock);
 }
 
 @end
