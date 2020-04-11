@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F005A1A02441545700349858 /* GCDTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F005A19F2441545700349858 /* GCDTimerVC.m */; };
+		F005A1A32441584900349858 /* XZQGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F005A1A22441584900349858 /* XZQGCDTimer.m */; };
 		F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */; };
 		F00FB548242D8CF20021BAA2 /* 消息转发.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F00FB547242D8CF20021BAA2 /* 消息转发.jpg */; };
 		F03DD0122410FE470097D400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0112410FE470097D400 /* AppDelegate.m */; };
@@ -61,6 +63,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F005A19E2441545700349858 /* GCDTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimerVC.h; sourceTree = "<group>"; };
+		F005A19F2441545700349858 /* GCDTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimerVC.m; sourceTree = "<group>"; };
+		F005A1A12441584900349858 /* XZQGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQGCDTimer.h; sourceTree = "<group>"; };
+		F005A1A22441584900349858 /* XZQGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQGCDTimer.m; sourceTree = "<group>"; };
 		F005BA362429ADD9005C7770 /* XZQTeacher_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Runtime.h; sourceTree = "<group>"; };
 		F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Runtime.m; sourceTree = "<group>"; };
 		F00A8726241A1D00000C1AA7 /* OC对象的分类.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的分类.md"; sourceTree = "<group>"; };
@@ -269,6 +275,10 @@
 				F0C3894F244016B70087F230 /* XZQProxy.m */,
 				F0C3895124401B850087F230 /* XZQProxyExtendsNSProxy.h */,
 				F0C3895224401B850087F230 /* XZQProxyExtendsNSProxy.m */,
+				F005A19E2441545700349858 /* GCDTimerVC.h */,
+				F005A19F2441545700349858 /* GCDTimerVC.m */,
+				F005A1A12441584900349858 /* XZQGCDTimer.h */,
+				F005A1A22441584900349858 /* XZQGCDTimer.m */,
 			);
 			path = "内存管理";
 			sourceTree = "<group>";
@@ -523,12 +533,14 @@
 				F0C24650243D661A0094B891 /* XZQMutexDemo2.m in Sources */,
 				F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */,
 				F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */,
+				F005A1A32441584900349858 /* XZQGCDTimer.m in Sources */,
 				F0C8D6B7243C25F0008BFD45 /* XZQOSSpinLockDemo.m in Sources */,
 				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
 				F0C24653243D6AD30094B891 /* XZQMutexDemo3.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
 				F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */,
+				F005A1A02441545700349858 /* GCDTimerVC.m in Sources */,
 				F0E6ED5C243EEEAA00EB9F98 /* XZQSeriesQueueDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

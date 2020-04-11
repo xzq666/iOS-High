@@ -33,6 +33,7 @@
 #import "ThreadVC.h"
 
 #import "MemoryManagerVC.h"
+#import "GCDTimerVC.h"
 
 @interface Student : NSObject
 {
@@ -61,6 +62,8 @@
 
 @property(nonatomic,strong) XZQPerson *person1;
 @property(nonatomic,strong) XZQPerson *person2;
+
+@property(nonatomic,copy) NSString *name;
 
 @end
 
@@ -107,16 +110,68 @@
 //    [(__bridge id)obj print];
 }
 
+int a = 10;
+static int b = 20;
+int c;
+static int d;
+
 - (void)memoryManager {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, 200, 100, 40);
     [btn setTitle:@"测试" forState:UIControlStateNormal];
     [self.view addSubview:btn];
     [btn addTarget:self action:@selector(memoryClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    NSLog(@"----------");
+    
+    NSString *s1 = @"123";
+    NSString *s2 = @"123";
+    NSLog(@"%p %p", s1, s2);
+    
+    NSLog(@"----------");
+    
+    NSObject *obj1 = [[NSObject alloc] init];
+    NSObject *obj2 = [[NSObject alloc] init];
+    NSObject *obj3 = [[NSObject alloc] init];
+    NSObject *obj4 = [[NSObject alloc] init];
+    
+    int m = 1;
+    int n = 2;
+    int j;
+    int k;
+    
+    NSLog(@"\ns: %p\na: %p\nb: %p\nc: %p\nd: %p\nobj1: %p\nobj2: %p\nobj3: %p\nobj4: %p\nm: %p\nn: %p\nj: %p\nk: %p", s1, &a, &b, &c, &d, obj1, obj2, obj3, obj4, &m, &n, &j, &k);
+    
+    NSString *str1 = [NSString stringWithFormat:@"abcdefghijklmn"];
+    NSString *str2 = [NSString stringWithFormat:@"abc"];
+    NSLog(@"%p %p", str1, str2);
+    NSLog(@"%@ %@", [str1 class], [str2 class]);
+    
+    // __NSCFString 会走setName方法，异步时导致name多释放，造成引用计数为负，引发坏地址
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//    for (int i = 0; i < 1000; i++) {
+//        dispatch_async(queue, ^{
+//            NSString *ss = [NSString stringWithFormat:@"abcdefghijkl%dmn", i];
+//            self.name = ss;
+//            NSLog(@"%@", self.name);
+//        });
+//    }
+    // NSTaggedPointerString不会走setName方法，故不会出错
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    for (int i = 0; i < 1000; i++) {
+        dispatch_async(queue, ^{
+            NSString *ss = [NSString stringWithFormat:@"ab%dc", i];
+            self.name = ss;
+            NSLog(@"%@", self.name);
+        });
+    }
 }
 
 - (void)memoryClick {
-    MemoryManagerVC *vc = [[MemoryManagerVC alloc] init];
+//    MemoryManagerVC *vc = [[MemoryManagerVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    GCDTimerVC *vc = [[GCDTimerVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
