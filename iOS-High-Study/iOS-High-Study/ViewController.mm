@@ -142,10 +142,21 @@ static int d;
     
     NSLog(@"\ns: %p\na: %p\nb: %p\nc: %p\nd: %p\nobj1: %p\nobj2: %p\nobj3: %p\nobj4: %p\nm: %p\nn: %p\nj: %p\nk: %p", s1, &a, &b, &c, &d, obj1, obj2, obj3, obj4, &m, &n, &j, &k);
     
+    NSLog(@"----------");
+    
     NSString *str1 = [NSString stringWithFormat:@"abcdefghijklmn"];
     NSString *str2 = [NSString stringWithFormat:@"abc"];
     NSLog(@"%p %p", str1, str2);
     NSLog(@"%@ %@", [str1 class], [str2 class]);
+    
+    NSNumber *number1 = @1;
+    NSNumber *number2 = @2;
+    NSNumber *number3 = @3;
+    
+    NSLog(@"%p %p %p", number1, number2, number3);
+    NSLog(@"%p %lx", number1, _objc_decodeTaggedPointer(number1));
+    NSLog(@"%p %lx", number2, _objc_decodeTaggedPointer(number2));
+    NSLog(@"%p %lx", number3, _objc_decodeTaggedPointer(number3));
     
     // __NSCFString 会走setName方法，异步时导致name多释放，造成引用计数为负，引发坏地址
 //    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
@@ -162,9 +173,35 @@ static int d;
         dispatch_async(queue, ^{
             NSString *ss = [NSString stringWithFormat:@"ab%dc", i];
             self.name = ss;
-            NSLog(@"%@", self.name);
+//            NSLog(@"%@", self.name);
         });
     }
+    
+    NSLog(@"----------");
+    
+    NSString *str_01 = [NSString stringWithFormat:@"test"];
+    NSString *str_02 = [str_01 copy];  // 返回的是NSString 不能调用[str_2 appendString:@"123"];
+    NSMutableString *str_03 = [str_01 mutableCopy];  // 返回的是NSMutableString
+    NSLog(@"%@ %@ %@", str_01, str_02, str_03);
+    NSLog(@"%p %p %p", str_01, str_02, str_03);
+    
+    NSMutableString *str_1 = [NSMutableString stringWithFormat:@"test"];
+    NSString *str_2 = [str_1 copy];
+    NSMutableString *str_3 = [str_1 mutableCopy];
+    NSLog(@"%@ %@ %@", str_1, str_2, str_3);
+    NSLog(@"%@ %@", [str_2 class], [str_3 class]);
+    NSLog(@"%p %p %p", str_1, str_2, str_3);
+    
+    [str_1 appendString:@"111"];
+//    [str_2 appendString:@"222"];
+    [str_3 appendString:@"333"];
+    NSLog(@"%@ %@ %@", str_1, str_2, str_3);
+}
+
+extern uintptr_t objc_debug_taggedpointer_obfuscator;
+uintptr_t _objc_decodeTaggedPointer(id ptr) {
+//    NSString *p = [NSString stringWithFormat:@"%ld", (long)ptr];
+    return (uintptr_t)ptr ^ objc_debug_taggedpointer_obfuscator;
 }
 
 - (void)memoryClick {
