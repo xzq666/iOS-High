@@ -34,6 +34,7 @@
 
 #import "MemoryManagerVC.h"
 #import "GCDTimerVC.h"
+#import "XZQPerson_copy.h"
 
 @interface Student : NSObject
 {
@@ -196,11 +197,22 @@ static int d;
 //    [str_2 appendString:@"222"];
     [str_3 appendString:@"333"];
     NSLog(@"%@ %@ %@", str_1, str_2, str_3);
+    
+    NSLog(@"----------");
+    
+    XZQPerson_copy *p1 = [[XZQPerson_copy alloc] init];
+    p1.age = 20;
+    p1.weight = 50.0f;
+    
+    XZQPerson_copy *p2 = [p1 copy];
+    p2.age = 30;
+    
+    NSLog(@"\n%@\n%@", p1, p2);
+    NSLog(@"%p %p", p1, p2);
 }
 
 extern uintptr_t objc_debug_taggedpointer_obfuscator;
 uintptr_t _objc_decodeTaggedPointer(id ptr) {
-//    NSString *p = [NSString stringWithFormat:@"%ld", (long)ptr];
     return (uintptr_t)ptr ^ objc_debug_taggedpointer_obfuscator;
 }
 

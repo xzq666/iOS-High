@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+#import "XZQPerson_copy.h"
+
+extern void _objc_autoreleasePoolPrint(void);
+
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
@@ -17,6 +21,8 @@ int main(int argc, char * argv[]) {
         NSLog(@"ret1:%d", ret1);
         
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
+        
+        _objc_autoreleasePoolPrint();
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
