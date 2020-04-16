@@ -71,6 +71,7 @@
 		F005BA362429ADD9005C7770 /* XZQTeacher_Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQTeacher_Runtime.h; sourceTree = "<group>"; };
 		F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Runtime.m; sourceTree = "<group>"; };
 		F00A8726241A1D00000C1AA7 /* OC对象的分类.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的分类.md"; sourceTree = "<group>"; };
+		F00A8B2924472C5C004B9878 /* 性能优化.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "性能优化.md"; sourceTree = "<group>"; };
 		F00FB547242D8CF20021BAA2 /* 消息转发.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "消息转发.jpg"; sourceTree = "<group>"; };
 		F03DD00D2410FE470097D400 /* iOS-High-Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-High-Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03DD0102410FE470097D400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +194,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F00A8B2824472C41004B9878 /* 性能优化 */ = {
+			isa = PBXGroup;
+			children = (
+				F00A8B2924472C5C004B9878 /* 性能优化.md */,
+			);
+			path = "性能优化";
+			sourceTree = "<group>";
+		};
 		F03C1504241B686900876475 /* KVO */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +240,7 @@
 				F0D25DF024342E7D00CADE66 /* Runloop */,
 				F0C3B9C32437036F00AD6DC6 /* 多线程 */,
 				F0C3894924400D5F0087F230 /* 内存管理 */,
+				F00A8B2824472C41004B9878 /* 性能优化 */,
 				F03DD0102410FE470097D400 /* AppDelegate.h */,
 				F03DD0112410FE470097D400 /* AppDelegate.m */,
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
