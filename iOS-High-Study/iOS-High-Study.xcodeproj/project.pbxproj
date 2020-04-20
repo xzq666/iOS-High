@@ -10,6 +10,11 @@
 		F005A1A02441545700349858 /* GCDTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F005A19F2441545700349858 /* GCDTimerVC.m */; };
 		F005A1A32441584900349858 /* XZQGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F005A1A22441584900349858 /* XZQGCDTimer.m */; };
 		F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */; };
+		F00F1314244D37E30013C26C /* XZQNews.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F1313244D37E30013C26C /* XZQNews.m */; };
+		F00F1317244D38360013C26C /* XZQNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F1316244D38360013C26C /* XZQNewsViewController.m */; };
+		F00F131B244D403F0013C26C /* XZQView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F131A244D403F0013C26C /* XZQView.m */; };
+		F00F131E244D411B0013C26C /* XZQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F131D244D411B0013C26C /* XZQModel.m */; };
+		F00F1321244D42790013C26C /* XZQModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F1320244D42790013C26C /* XZQModelViewController.m */; };
 		F00FB548242D8CF20021BAA2 /* 消息转发.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F00FB547242D8CF20021BAA2 /* 消息转发.jpg */; };
 		F03DD0122410FE470097D400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0112410FE470097D400 /* AppDelegate.m */; };
 		F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0142410FE470097D400 /* SceneDelegate.m */; };
@@ -72,6 +77,17 @@
 		F005BA372429ADD9005C7770 /* XZQTeacher_Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQTeacher_Runtime.m; sourceTree = "<group>"; };
 		F00A8726241A1D00000C1AA7 /* OC对象的分类.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "OC对象的分类.md"; sourceTree = "<group>"; };
 		F00A8B2924472C5C004B9878 /* 性能优化.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "性能优化.md"; sourceTree = "<group>"; };
+		F00F1310244D36DB0013C26C /* 架构设计.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "架构设计.md"; sourceTree = "<group>"; };
+		F00F1312244D37E30013C26C /* XZQNews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQNews.h; sourceTree = "<group>"; };
+		F00F1313244D37E30013C26C /* XZQNews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNews.m; sourceTree = "<group>"; };
+		F00F1315244D38360013C26C /* XZQNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQNewsViewController.h; sourceTree = "<group>"; };
+		F00F1316244D38360013C26C /* XZQNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQNewsViewController.m; sourceTree = "<group>"; };
+		F00F1319244D403F0013C26C /* XZQView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQView.h; sourceTree = "<group>"; };
+		F00F131A244D403F0013C26C /* XZQView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQView.m; sourceTree = "<group>"; };
+		F00F131C244D411B0013C26C /* XZQModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQModel.h; sourceTree = "<group>"; };
+		F00F131D244D411B0013C26C /* XZQModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQModel.m; sourceTree = "<group>"; };
+		F00F131F244D42790013C26C /* XZQModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQModelViewController.h; sourceTree = "<group>"; };
+		F00F1320244D42790013C26C /* XZQModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQModelViewController.m; sourceTree = "<group>"; };
 		F00FB547242D8CF20021BAA2 /* 消息转发.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "消息转发.jpg"; sourceTree = "<group>"; };
 		F03DD00D2410FE470097D400 /* iOS-High-Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-High-Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03DD0102410FE470097D400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -202,6 +218,40 @@
 			path = "性能优化";
 			sourceTree = "<group>";
 		};
+		F00F130F244D36C60013C26C /* 架构设计 */ = {
+			isa = PBXGroup;
+			children = (
+				F00F1311244D37D50013C26C /* MVC */,
+				F00F1318244D401F0013C26C /* MVC变种 */,
+				F00F1310244D36DB0013C26C /* 架构设计.md */,
+			);
+			path = "架构设计";
+			sourceTree = "<group>";
+		};
+		F00F1311244D37D50013C26C /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				F00F1312244D37E30013C26C /* XZQNews.h */,
+				F00F1313244D37E30013C26C /* XZQNews.m */,
+				F00F1315244D38360013C26C /* XZQNewsViewController.h */,
+				F00F1316244D38360013C26C /* XZQNewsViewController.m */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		F00F1318244D401F0013C26C /* MVC变种 */ = {
+			isa = PBXGroup;
+			children = (
+				F00F1319244D403F0013C26C /* XZQView.h */,
+				F00F131A244D403F0013C26C /* XZQView.m */,
+				F00F131C244D411B0013C26C /* XZQModel.h */,
+				F00F131D244D411B0013C26C /* XZQModel.m */,
+				F00F131F244D42790013C26C /* XZQModelViewController.h */,
+				F00F1320244D42790013C26C /* XZQModelViewController.m */,
+			);
+			path = "MVC变种";
+			sourceTree = "<group>";
+		};
 		F03C1504241B686900876475 /* KVO */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +291,7 @@
 				F0C3B9C32437036F00AD6DC6 /* 多线程 */,
 				F0C3894924400D5F0087F230 /* 内存管理 */,
 				F00A8B2824472C41004B9878 /* 性能优化 */,
+				F00F130F244D36C60013C26C /* 架构设计 */,
 				F03DD0102410FE470097D400 /* AppDelegate.h */,
 				F03DD0112410FE470097D400 /* AppDelegate.m */,
 				F03DD0132410FE470097D400 /* SceneDelegate.h */,
@@ -531,6 +582,9 @@
 				F0CB3EE72435B9230009EB1C /* RunloopVC.m in Sources */,
 				F0D44EE0242C426D00ADE4B4 /* XZQSonOfSon_Runtime.m in Sources */,
 				F0DE558F24207BC0007BF97D /* XZQTeacher_Category.m in Sources */,
+				F00F131E244D411B0013C26C /* XZQModel.m in Sources */,
+				F00F1317244D38360013C26C /* XZQNewsViewController.m in Sources */,
+				F00F1314244D37E30013C26C /* XZQNews.m in Sources */,
 				F0D25DE92434249200CADE66 /* UIControl+Extension.m in Sources */,
 				F0DE558C2420607A007BF97D /* XZQStudent_Category+Test2.m in Sources */,
 				F06A7B8A242F2CFD003BFA0D /* XZQPerson_super.m in Sources */,
@@ -548,11 +602,13 @@
 				F0C3895324401B850087F230 /* XZQProxyExtendsNSProxy.m in Sources */,
 				F0C24650243D661A0094B891 /* XZQMutexDemo2.m in Sources */,
 				F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */,
+				F00F131B244D403F0013C26C /* XZQView.m in Sources */,
 				F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */,
 				F005A1A32441584900349858 /* XZQGCDTimer.m in Sources */,
 				F0C8D6B7243C25F0008BFD45 /* XZQOSSpinLockDemo.m in Sources */,
 				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
 				F0C24653243D6AD30094B891 /* XZQMutexDemo3.m in Sources */,
+				F00F1321244D42790013C26C /* XZQModelViewController.m in Sources */,
 				F03DD0232410FE4D0097D400 /* main.m in Sources */,
 				F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */,
 				F0D5B8A9241F15D4006284AF /* XZQPerson_KVC.m in Sources */,

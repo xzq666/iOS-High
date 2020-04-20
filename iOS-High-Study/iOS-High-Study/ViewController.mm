@@ -36,6 +36,9 @@
 #import "GCDTimerVC.h"
 #import "XZQPerson_copy.h"
 
+#import "XZQNewsViewController.h"
+#import "XZQModelViewController.h"
+
 @interface Student : NSObject
 {
     @public
@@ -95,7 +98,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self memoryManager];
+    [self jg];
     
     /*
      1.print为什么能够调用
@@ -109,6 +112,14 @@
 //    id cls = [XZQPerson_super class];
 //    void *obj = &cls;
 //    [(__bridge id)obj print];
+}
+
+- (void)jg {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(20, 200, 100, 40);
+    [btn setTitle:@"测试" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(memoryClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 int a = 10;
@@ -220,7 +231,10 @@ uintptr_t _objc_decodeTaggedPointer(id ptr) {
 //    MemoryManagerVC *vc = [[MemoryManagerVC alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    GCDTimerVC *vc = [[GCDTimerVC alloc] init];
+//    GCDTimerVC *vc = [[GCDTimerVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    XZQModelViewController *vc = [[XZQModelViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
