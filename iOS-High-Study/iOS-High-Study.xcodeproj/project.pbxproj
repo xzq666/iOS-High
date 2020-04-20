@@ -16,6 +16,13 @@
 		F00F131E244D411B0013C26C /* XZQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F131D244D411B0013C26C /* XZQModel.m */; };
 		F00F1321244D42790013C26C /* XZQModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00F1320244D42790013C26C /* XZQModelViewController.m */; };
 		F00FB548242D8CF20021BAA2 /* 消息转发.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F00FB547242D8CF20021BAA2 /* 消息转发.jpg */; };
+		F02C776A244DB96D00ED2874 /* XZQPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C7769244DB96D00ED2874 /* XZQPresenter.m */; };
+		F02C776D244DB97C00ED2874 /* XZQMVPController.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C776C244DB97C00ED2874 /* XZQMVPController.m */; };
+		F02C7771244DBDB100ED2874 /* XZQViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C7770244DBDB100ED2874 /* XZQViewModel.m */; };
+		F02C7774244DBDC600ED2874 /* XZQMVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C7773244DBDC600ED2874 /* XZQMVVMController.m */; };
+		F02C7777244DBF0200ED2874 /* XZQMVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C7776244DBF0200ED2874 /* XZQMVVMView.m */; };
+		F02C777D244DC0FE00ED2874 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C777A244DC0FD00ED2874 /* NSObject+FBKVOController.m */; };
+		F02C777E244DC0FE00ED2874 /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = F02C777B244DC0FD00ED2874 /* FBKVOController.m */; };
 		F03DD0122410FE470097D400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0112410FE470097D400 /* AppDelegate.m */; };
 		F03DD0152410FE470097D400 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0142410FE470097D400 /* SceneDelegate.m */; };
 		F03DD0182410FE470097D400 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F03DD0172410FE470097D400 /* ViewController.mm */; };
@@ -89,6 +96,20 @@
 		F00F131F244D42790013C26C /* XZQModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQModelViewController.h; sourceTree = "<group>"; };
 		F00F1320244D42790013C26C /* XZQModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQModelViewController.m; sourceTree = "<group>"; };
 		F00FB547242D8CF20021BAA2 /* 消息转发.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "消息转发.jpg"; sourceTree = "<group>"; };
+		F02C7768244DB96D00ED2874 /* XZQPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQPresenter.h; sourceTree = "<group>"; };
+		F02C7769244DB96D00ED2874 /* XZQPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQPresenter.m; sourceTree = "<group>"; };
+		F02C776B244DB97C00ED2874 /* XZQMVPController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMVPController.h; sourceTree = "<group>"; };
+		F02C776C244DB97C00ED2874 /* XZQMVPController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMVPController.m; sourceTree = "<group>"; };
+		F02C776F244DBDB100ED2874 /* XZQViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQViewModel.h; sourceTree = "<group>"; };
+		F02C7770244DBDB100ED2874 /* XZQViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQViewModel.m; sourceTree = "<group>"; };
+		F02C7772244DBDC600ED2874 /* XZQMVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMVVMController.h; sourceTree = "<group>"; };
+		F02C7773244DBDC600ED2874 /* XZQMVVMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMVVMController.m; sourceTree = "<group>"; };
+		F02C7775244DBF0200ED2874 /* XZQMVVMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZQMVVMView.h; sourceTree = "<group>"; };
+		F02C7776244DBF0200ED2874 /* XZQMVVMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZQMVVMView.m; sourceTree = "<group>"; };
+		F02C7779244DC0FD00ED2874 /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		F02C777A244DC0FD00ED2874 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		F02C777B244DC0FD00ED2874 /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		F02C777C244DC0FD00ED2874 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 		F03DD00D2410FE470097D400 /* iOS-High-Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-High-Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03DD0102410FE470097D400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F03DD0112410FE470097D400 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -223,6 +244,8 @@
 			children = (
 				F00F1311244D37D50013C26C /* MVC */,
 				F00F1318244D401F0013C26C /* MVC变种 */,
+				F02C7767244DB91A00ED2874 /* MVP */,
+				F02C776E244DBDA100ED2874 /* MVVM */,
 				F00F1310244D36DB0013C26C /* 架构设计.md */,
 			);
 			path = "架构设计";
@@ -250,6 +273,42 @@
 				F00F1320244D42790013C26C /* XZQModelViewController.m */,
 			);
 			path = "MVC变种";
+			sourceTree = "<group>";
+		};
+		F02C7767244DB91A00ED2874 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				F02C7768244DB96D00ED2874 /* XZQPresenter.h */,
+				F02C7769244DB96D00ED2874 /* XZQPresenter.m */,
+				F02C776B244DB97C00ED2874 /* XZQMVPController.h */,
+				F02C776C244DB97C00ED2874 /* XZQMVPController.m */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		F02C776E244DBDA100ED2874 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F02C7778244DC0FD00ED2874 /* KVOController */,
+				F02C7775244DBF0200ED2874 /* XZQMVVMView.h */,
+				F02C7776244DBF0200ED2874 /* XZQMVVMView.m */,
+				F02C776F244DBDB100ED2874 /* XZQViewModel.h */,
+				F02C7770244DBDB100ED2874 /* XZQViewModel.m */,
+				F02C7772244DBDC600ED2874 /* XZQMVVMController.h */,
+				F02C7773244DBDC600ED2874 /* XZQMVVMController.m */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		F02C7778244DC0FD00ED2874 /* KVOController */ = {
+			isa = PBXGroup;
+			children = (
+				F02C7779244DC0FD00ED2874 /* FBKVOController.h */,
+				F02C777B244DC0FD00ED2874 /* FBKVOController.m */,
+				F02C777A244DC0FD00ED2874 /* NSObject+FBKVOController.m */,
+				F02C777C244DC0FD00ED2874 /* NSObject+FBKVOController.h */,
+			);
+			path = KVOController;
 			sourceTree = "<group>";
 		};
 		F03C1504241B686900876475 /* KVO */ = {
@@ -563,12 +622,15 @@
 			files = (
 				F0E6ED5F243EF18100EB9F98 /* XZQSemaphoreDemo.m in Sources */,
 				F0D44EDA242C424600ADE4B4 /* XZQFather_Runtime.m in Sources */,
+				F02C776A244DB96D00ED2874 /* XZQPresenter.m in Sources */,
 				F0CB3EE4243585B60009EB1C /* XZQThread.m in Sources */,
+				F02C777E244DC0FE00ED2874 /* FBKVOController.m in Sources */,
 				F0C3B9C22436E0E100AD6DC6 /* PermenantThreadVC.m in Sources */,
 				F0D5B8B1241F2249006284AF /* XZQPerson_Category+Test.m in Sources */,
 				F0DE558924206072007BF97D /* XZQStudent_Category+Test1.m in Sources */,
 				F0C2464A243D5D150094B891 /* XZQOSUnfairLockDemo.m in Sources */,
 				F0D5B8B4241F2578006284AF /* XZQPerson_Category+Eat.m in Sources */,
+				F02C7774244DBDC600ED2874 /* XZQMVVMController.m in Sources */,
 				F0E6ED62243EF58000EB9F98 /* XZQSynchronizedDemo.m in Sources */,
 				F06A7B8D242F2D0D003BFA0D /* XZQSon_super.m in Sources */,
 				F005BA382429ADD9005C7770 /* XZQTeacher_Runtime.m in Sources */,
@@ -600,11 +662,15 @@
 				F0C2464D243D5FDE0094B891 /* XZQMutexDemo.m in Sources */,
 				F0D44EDD242C425900ADE4B4 /* XZQSon_Runtime.m in Sources */,
 				F0C3895324401B850087F230 /* XZQProxyExtendsNSProxy.m in Sources */,
+				F02C7771244DBDB100ED2874 /* XZQViewModel.m in Sources */,
 				F0C24650243D661A0094B891 /* XZQMutexDemo2.m in Sources */,
 				F0C8D6B4243C2502008BFD45 /* XZQBaseLock.m in Sources */,
+				F02C777D244DC0FE00ED2874 /* NSObject+FBKVOController.m in Sources */,
 				F00F131B244D403F0013C26C /* XZQView.m in Sources */,
+				F02C776D244DB97C00ED2874 /* XZQMVPController.m in Sources */,
 				F0C24659243D73180094B891 /* XZQNSConditionDemo.m in Sources */,
 				F005A1A32441584900349858 /* XZQGCDTimer.m in Sources */,
+				F02C7777244DBF0200ED2874 /* XZQMVVMView.m in Sources */,
 				F0C8D6B7243C25F0008BFD45 /* XZQOSSpinLockDemo.m in Sources */,
 				F0C60D0E24299B370044451C /* XZQStudent_Runtime.m in Sources */,
 				F0C24653243D6AD30094B891 /* XZQMutexDemo3.m in Sources */,

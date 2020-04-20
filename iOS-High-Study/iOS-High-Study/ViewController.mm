@@ -38,6 +38,8 @@
 
 #import "XZQNewsViewController.h"
 #import "XZQModelViewController.h"
+#import "XZQMVPController.h"
+#import "XZQMVVMController.h"
 
 @interface Student : NSObject
 {
@@ -234,7 +236,7 @@ uintptr_t _objc_decodeTaggedPointer(id ptr) {
 //    GCDTimerVC *vc = [[GCDTimerVC alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    XZQModelViewController *vc = [[XZQModelViewController alloc] init];
+    XZQMVVMController *vc = [[XZQMVVMController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
